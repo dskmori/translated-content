@@ -44,7 +44,7 @@ original_slug: Web/API/NonDocumentTypeChildNode/previousElementSibling
    4. DIV
 </pre>
 
-<h2 id="Полифилл_для_Internet_Explorer_8">Полифилл для Internet Explorer 8</h2>
+<h2 id="Полифил_для_Internet_Explorer_8">Полифил для Internet Explorer 8</h2>
 
 <p>Это свойство поддерживается начиная с версии IE9, поэтому следующий фрагмент поддерживается, и может использоваться для IE8:</p>
 
@@ -60,7 +60,7 @@ if(!("previousElementSibling" in document.documentElement)){
     });
 }</pre>
 
-<h2 id="Specification" name="Specification">Полифилл для  Internet Explorer 9+ и Safari</h2>
+<h2 id="Specification" name="Specification">Полифил для  Internet Explorer 9+ и Safari</h2>
 
 <pre class="brush: js">// Ресурс: https://github.com/jserz/js_piece/blob/master/DOM/NonDocumentTypeChildNode/previousElementSibling/previousElementSibling.md
 (function (arr) {
@@ -110,73 +110,9 @@ if(!("previousElementSibling" in document.documentElement)){
 
 <h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
 
-<div>{{CompatibilityTable}}</div>
+<p>{{Compat("api.Element.previousElementSibling")}}</p>
 
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Функционал</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support (on {{domxref("Element")}})</td>
-   <td>4</td>
-   <td>{{CompatGeckoDesktop("1.9.1")}}</td>
-   <td>9</td>
-   <td>9.8</td>
-   <td>4</td>
-  </tr>
-  <tr>
-   <td>Support on {{domxref("CharacterData")}}</td>
-   <td>29.0</td>
-   <td>{{CompatGeckoDesktop("25")}} [1]</td>
-   <td>{{CompatNo}}</td>
-   <td>16.0</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Функционал</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support (on {{domxref("Element")}})</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("1.9.1")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>9.8</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>Support on {{domxref("CharacterData")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("25")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>16.0</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Firefox 25 так же добавлено это свойство {{domxref("DocumentType")}}, но было удалено в Firefox 28 из-за проблем с совместимостью.</p>
-
-<h2 id="Смотрите_так_же">Смотрите так же</h2>
+<h2 id="Смотрите_также">Смотрите также</h2>
 
 <ul>
  <li> {{domxref("NonDocumentTypeChildNode")}} чистый интерфейс.</li>

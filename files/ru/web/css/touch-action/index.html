@@ -25,7 +25,7 @@ touch-action: initial;
 touch-action: unset;
 </pre>
 
-<p>По умолчанию, жесты панорамирование, прокрутка и сужающий обрабатываются исключительно браузером. Приложение, использующие  {{domxref("Pointer_events", "Pointer events", "", 1)}} получит событие {{domxref("HTMLElement/pointercancel_event", "pointercancel")}}, когда браузер начнет обрабатывать тач жест. Явно указывая жесты обрабатываемые браузером, приложение может иметь свое поведение для оставшихся жестов благодаря прослушиванию событий  {{domxref("HTMLElement/pointermove_event", "pointermove")}} и {{domxref("HTMLElement/pointerup_event", "pointerup")}}. Applications using {{domxref("Touch_events", "Touch events", "", 1)}} disable the browser handling of gestures by calling {{domxref("Event.preventDefault","preventDefault()")}}, but should also use <code>touch-action</code> to ensure the browser knows the intent of the application before any event listeners have been invoked.</p>
+<p>По умолчанию, жесты панорамирование, прокрутка и сужающий обрабатываются исключительно браузером. Приложение, использующие  {{domxref("Pointer_events", "Pointer events", "", 1)}} получит событие {{domxref("HTMLElement/pointercancel_event", "pointercancel")}}, когда браузер начнёт обрабатывать тач жест. Явно указывая жесты обрабатываемые браузером, приложение может иметь своё поведение для оставшихся жестов благодаря прослушиванию событий  {{domxref("HTMLElement/pointermove_event", "pointermove")}} и {{domxref("HTMLElement/pointerup_event", "pointerup")}}. Applications using {{domxref("Touch_events", "Touch events", "", 1)}} disable the browser handling of gestures by calling {{domxref("Event.preventDefault","preventDefault()")}}, but should also use <code>touch-action</code> to ensure the browser knows the intent of the application before any event listeners have been invoked.</p>
 
 <p>When a gesture is started, the browser intersects the <strong>touch-action</strong> values of the touched element and all its ancestors up to the one that implements the gesture (in other words, the first containing scrolling element). This means that in practice, <strong>touch-action</strong> is typically applied only to individual elements which have some custom behavior, without needing to specify <strong>touch-action</strong> explicitly on any of that element's descendants. After a gesture has started, changes to <strong>touch-action</strong> values will not have any impact on the behavior of the current gesture.</p>
 
@@ -62,7 +62,7 @@ touch-action: unset;
 
 <h3 id="Formal_syntax">Formal syntax</h3>
 
-<pre class="syntaxbox notranslate">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <h2 id="Examples">Examples</h2>
 
@@ -120,109 +120,7 @@ touch-action: unset;
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{ CompatibilityTable }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(36.0)}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("52.0")}}<sup>[1]</sup></td>
-   <td>10.0{{property_prefix("-ms")}}<sup>[2]</sup><br>
-    11.0</td>
-   <td>{{CompatOpera(23)}}</td>
-   <td>{{CompatNo}}<sup>[4]</sup></td>
-  </tr>
-  <tr>
-   <td><code>pan-up</code>, <code>pan-down</code>, <code>pan-left</code>, <code>pan-right</code></td>
-   <td>{{CompatChrome(55.0)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}<sup>[5]</sup></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatOpera(42)}}</td>
-   <td>{{CompatNo}}<sup>[4]</sup></td>
-  </tr>
-  <tr>
-   <td><code>pinch-zoom</code></td>
-   <td>{{CompatChrome(56.0)}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}<sup>[5]</sup></td>
-   <td>10.0{{property_prefix("-ms")}}<sup>[2]</sup><br>
-    11.0</td>
-   <td>{{CompatOpera(43)}}</td>
-   <td>{{CompatNo}}<sup>[4]</sup></td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android Webview</th>
-   <th>Chrome for Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(36.0)}}</td>
-   <td>{{CompatChrome(36.0)}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("52.0")}}<sup>[1]</sup></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>9.1 [3]</td>
-  </tr>
-  <tr>
-   <td><code>pan-up</code>, <code>pan-down</code>, <code>pan-left</code>, <code>pan-right</code></td>
-   <td>{{CompatChrome(55.0)}}</td>
-   <td>{{CompatChrome(55.0)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}<sup>[5]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatOperaMobile(42)}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>pinch-zoom</code></td>
-   <td>{{CompatChrome(56.0)}}</td>
-   <td>{{CompatChrome(56.0)}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}<sup>[5]</sup></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatOperaMobile(43)}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] This property (Level 1 keywords only) is implemented since Firefox 29, but is hidden behind the <code>layout.css.touch_action.enabled</code> preference. Starting in Firefox Nightly 50, it is enabled by default when running in nightly builds only. It is currently on track to be released in Firefox 52, see {{bug(1244402)}}.</p>
-
-<p>[2] IE10+ additionally supports the non-standard values <a href="https://msdn.microsoft.com/zh-cn/library/windows/apps/hh767313.aspx">pinch-zoom, double-tap-zoom, cross-slide-x and cross-slide-y</a>.</p>
-
-<p>[3] <a href="https://bugs.webkit.org/show_bug.cgi?id=149854">Only supports the manipulation and auto values in iOS</a>.</p>
-
-<p>[4] See {{webkitbug("133112")}}.</p>
-
-<p>[5] See {{bug(1285685)}}.</p>
+<p>{{compat("css.properties.touch-action")}}</p>
 
 <h2 id="See_also">See also</h2>
 

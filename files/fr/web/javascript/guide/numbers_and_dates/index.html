@@ -15,7 +15,7 @@ original_slug: Web/JavaScript/Guide/Nombres_et_dates
 
 <p>Les nombres en JavaScript sont implémentés comme des <a href="https://en.wikipedia.org/wiki/Double-precision_floating-point_format">nombres sur 64 bits à précision double selon le format IEEE-754</a> qui est un standard pour la représentation des nombres flottants et qui permet d'avoir jusqu'à 16 chiffres significatifs. Le type numérique possède également trois valeurs spéciales symboliques : +{{jsxref("Infinity")}}, -{{jsxref("Infinity")}} et {{jsxref("NaN")}} (pour désigner une valeur qui n'est pas un nombre).</p>
 
-<p>Le format IEEE-754 permet de représenter des valeurs entre ±2<sup>−1022</sup> et ±2<sup>+1023</sup>, ce qui correspond à des valeurs entre ±10<sup>−308</sup> et ±10<sup>+308</sup> avec une précision sur 53 bits. Les nombres entiers compris sur l'intervalle ±2<sup>53 </sup>− 1 peuvent être représentés exactement.</p>
+<p>Le format IEEE-754 permet de représenter des valeurs entre ±2^−1022 et ±2^+1023, ce qui correspond à des valeurs entre ±10^−308 et ±10^+308 avec une précision sur 53 bits. Les nombres entiers compris sur l'intervalle ±2^53 − 1 peuvent être représentés exactement.</p>
 
 <p>Le type {{jsxref("BigInt")}} est une addition récente à JavaScript qui permet de représenter de grands entiers. Toutefois, il n'est pas possible de mélanger les <code>BigInt</code> et les nombres ({{jsxref("Number")}}) dans les mêmes opérations et on ne peut pas utiliser l'objet {{jsxref("Math")}} avec les valeurs <code>BigInt</code>.</p>
 
@@ -124,12 +124,12 @@ var pasUnNombre = Number.NaN;
   </tr>
   <tr>
    <td>{{jsxref("Number.MIN_SAFE_INTEGER")}}</td>
-   <td>Le plus petit entier qu'on puisse représenter en JavaScript. (−2<sup>53</sup> + 1 ou <code>−9007199254740991</code>)</td>
+   <td>Le plus petit entier qu'on puisse représenter en JavaScript. (−2^53 + 1 ou <code>−9007199254740991</code>)</td>
   </tr>
   <tr>
    <td>{{jsxref("Number.MAX_SAFE_INTEGER")}}</td>
    <td>
-    <p>L'entier le plus grand qu'on puisse représenter en JavaScript (+2<sup>53</sup> − 1 ou <code>+9007199254740991</code>)</p>
+    <p>L'entier le plus grand qu'on puisse représenter en JavaScript (+2^53 − 1 ou <code>+9007199254740991</code>)</p>
    </td>
   </tr>
  </tbody>
@@ -338,17 +338,21 @@ var pasUnNombre = Number.NaN;
 
 <p>Par exemple, les instructions suivantes affichent le nombre de jours qui restent pour l'année courante :</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">var</span> aujourdhui <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">Date</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="comment token">// On définit le jour et le mois</span>
-<span class="keyword token">var</span> finAnnée <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">Date</span><span class="punctuation token">(</span><span class="number token">1995</span><span class="punctuation token">,</span> <span class="number token">11</span><span class="punctuation token">,</span> <span class="number token">31</span><span class="punctuation token">,</span> <span class="number token">23</span><span class="punctuation token">,</span> <span class="number token">59</span><span class="punctuation token">,</span> <span class="number token">59</span><span class="punctuation token">,</span> <span class="number token">999</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="comment token">// On définit l'année avec l'année courante</span>
-finAnnée<span class="punctuation token">.</span><span class="function token">setFullYear</span><span class="punctuation token">(</span>aujourdhui<span class="punctuation token">.</span><span class="function token">getFullYear</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="comment token">// On calcule le nombre de millisecondes par jour</span>
-<span class="keyword token">var</span> msParJour <span class="operator token">=</span> <span class="number token">24</span> <span class="operator token">*</span> <span class="number token">60</span> <span class="operator token">*</span> <span class="number token">60</span> <span class="operator token">*</span> <span class="number token">1000</span><span class="punctuation token">;</span>
+<pre class="brush: js">var aujourdhui = new Date();
 
-<span class="comment token">// On renvoie le nombre de jours restants dans l'année</span>
-<span class="keyword token">var</span> joursRestants <span class="operator token">=</span> <span class="punctuation token">(</span>finAnnée<span class="punctuation token">.</span><span class="function token">getTime</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="operator token">-</span> today<span class="punctuation token">.</span><span class="function token">getTime</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">)</span> <span class="operator token">/</span> msPerDay<span class="punctuation token">;</span>
-joursRestants <span class="operator token">=</span> Math<span class="punctuation token">.</span><span class="function token">round</span><span class="punctuation token">(</span>joursRestants<span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+// On définit le jour et le mois
+var finAnnée = new Date(1995, 11, 31, 23, 59, 59, 999);
+
+// On définit l'année avec l'année courante
+finAnnée.setFullYear(aujourdhui.getFullYear());
+
+// On calcule le nombre de millisecondes par jour
+var msParJour = 24 * 60 * 60 * 1000;
+
+// On renvoie le nombre de jours restants dans l'année
+var joursRestants = (finAnnée.getTime() - aujourdhui.getTime()) / msParJour;
+
+joursRestants = Math.round(joursRestants);</pre>
 
 <p>Cet exemple crée un objet <code>Date</code> nommé <code>aujourdhui</code> qui contient la date du jour. On crée ensuite un objet <code>Date</code> nommé <code>finAnnée</code> pour lequel on définit ensuite l'année avec l'année courante. Après, on calcule le nombre de millisecondes qui s'écoulent dans une journée. Enfin, on calcule le nombre de jours entre <code>aujourdhui</code> et <code>finAnnée</code> en utilisant <code>getTime</code> puis on arrondit le tout pour avoir un nombre de jours.</p>
 

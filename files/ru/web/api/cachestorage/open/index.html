@@ -12,13 +12,13 @@ translation_of: Web/API/CacheStorage/open
 ---
 <p>{{APIRef("Service Workers API")}}{{SeeCompatTable}}</p>
 
-<p><strong><code>open()</code></strong> метод из {{domxref("CacheStorage")}} интерфейса возвращает {{jsxref("Promise")}} который резолвится в {{domxref("Cache")}} обьект с соответствующим <code>cacheName (именем тега кеша)</code>.</p>
+<p><strong><code>open()</code></strong> метод из {{domxref("CacheStorage")}} интерфейса возвращает {{jsxref("Promise")}} который резолвится в {{domxref("Cache")}} объект с соответствующим <code>cacheName (именем тега кеша)</code>.</p>
 
 <div class="note">
 <p><strong>Note</strong>: If the specified {{domxref("Cache")}} does not exist, a new cache is created with that <code>cacheName</code>.</p>
 </div>
 
-<h2 id="Синтакс">Синтакс</h2>
+<h2 id="Синтаксис">Синтаксис</h2>
 
 <pre class="syntaxbox">caches.open(<em>cacheName</em>).then(function(<em>cache</em>) {
   //обрабатываем кеш например: cache.AddAll(filesToCache); где filesToCache = ['/mypic.png', ...]
@@ -27,7 +27,7 @@ translation_of: Web/API/CacheStorage/open
 
 <h3 id="Возвращает">Возвращает</h3>
 
-<p>{{jsxref("Promise")}} который резолвится в запрашиваемый {{domxref("Cache")}} обьект.</p>
+<p>{{jsxref("Promise")}} который резолвится в запрашиваемый {{domxref("Cache")}} объект.</p>
 
 <h3 id="Параметры">Параметры</h3>
 
@@ -78,59 +78,7 @@ var cachedResponse = caches.match(event.request).catch(function() {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(40.0)}}</td>
-   <td>{{CompatGeckoDesktop(44)}}<sup>[1]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoMobile(44)}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatChrome(40.0)}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Service workers (and <a href="/en-US/docs/Web/API/Push_API">Push</a>) have been disabled in the <a href="https://www.mozilla.org/en-US/firefox/organizations/">Firefox 45 Extended Support Release</a> (ESR.)</p>
+<p>{{Compat("api.CacheStorage.open")}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -17,7 +17,7 @@ translation_of: Web/API/MediaDevices
 ---
 <div>{{APIRef("Media Capture and Streams")}}{{SeeCompatTable}}</div>
 
-<p><span class="seoSummary">Интерфейс <strong><code>MediaDevices</code></strong> предоставляет доступ к подключенным медиа-устройствам ввода, таким как камера, микрофон, а также к совместному использованию экрана. В сущности, он позволяет получать доступ к любому устройству медиа-данных.</span></p>
+<p><span class="seoSummary">Интерфейс <strong><code>MediaDevices</code></strong> предоставляет доступ к подключённым медиа-устройствам ввода, таким как камера, микрофон, а также к совместному использованию экрана. В сущности, он позволяет получать доступ к любому устройству медиа-данных.</span></p>
 
 <h2 id="Свойства">Свойства</h2>
 
@@ -27,7 +27,7 @@ translation_of: Web/API/MediaDevices
 
 <dl>
  <dt>{{ domxref("MediaDevices.ondevicechange") }}</dt>
- <dd>Это обработчик события {{event("devicechange")}}. Это событие доставляется в объек <code>MediaDevices</code> когда медиа-устройство ввода или вывода подключается или отключается на компьютере пользователя.</dd>
+ <dd>Это обработчик события {{event("devicechange")}}. Это событие доставляется в объект <code>MediaDevices</code> когда медиа-устройство ввода или вывода подключается или отключается на компьютере пользователя.</dd>
 </dl>
 
 <h2 id="Методы">Методы</h2>
@@ -36,7 +36,7 @@ translation_of: Web/API/MediaDevices
 
 <dl>
  <dt>{{ domxref("EventTarget.addEventListener()") }}</dt>
- <dd>Регистрирует обработчик событий для определенного типа событий.</dd>
+ <dd>Регистрирует обработчик событий для определённого типа событий.</dd>
  <dt>{{ domxref("MediaDevices.enumerateDevices()") }}</dt>
  <dd>Получает массив информации о медиа-устройстве ввода-вывода.</dd>
  <dt>{{domxref("MediaDevices.getSupportedConstraints()")}}</dt>
@@ -111,121 +111,7 @@ function errorMsg(msg, error) {
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Microsoft Edge</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("36.0")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>enumerateDevices()</code></td>
-   <td>{{CompatChrome(51.0)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>getSupportedConstraints()</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop(50)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>ondevicechange</code> and <code>devicechange</code> events</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop(51)}}<sup>[1]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("36.0")}}</td>
-   <td>2.2</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>enumerateDevices()</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>getSupportedConstraints()</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile(50)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-
-<p>[1] Поддержка события <code>devicechange</code> и {{domxref("MediaDevices.ondevicechange")}} появилась Firefox 51, но <em>только для Mac </em>и по умолчанию отключена. Её можно включить, установив параметру <code>media.ondevicechange.enabled</code> значение ИСТИНА. Для Linux и Windows поддержка добавлена и включена по умолчанию с Firefox 52.</p>
-</div>
+<p>{{Compat("api.MediaDevices")}}</p>
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 

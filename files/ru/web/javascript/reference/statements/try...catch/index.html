@@ -57,7 +57,7 @@ translation_of: Web/JavaScript/Reference/Statements/try...catch
 
 <h2 id="Описание">Описание</h2>
 
-<p>Конструкция <code>try</code> содержит блок <code>try</code>, в котором находится одна или несколько инструкций (Блок (<code>{}</code> ) обязательно должен присутствовать, даже если выполняется всего одна инуструкция), и хотя бы один блок <code>catch</code> или <code>finally</code>. Таким образом, есть три основные формы конструкции <code>try</code>:</p>
+<p>Конструкция <code>try</code> содержит блок <code>try</code>, в котором находится одна или несколько инструкций (Блок (<code>{}</code> ) обязательно должен присутствовать, даже если выполняется всего одна инструкция), и хотя бы один блок <code>catch</code> или <code>finally</code>. Таким образом, есть три основные формы конструкции <code>try</code>:</p>
 
 <ol>
  <li><code>try {...} catch {...}</code></li>
@@ -86,7 +86,7 @@ catch (e) {
 }
 </pre>
 
-<p>Блок <code>catch</code> задает идентификатор (<code>e</code> в примере выше) который содержит объект исключения (в примере выше — значение, переданное оператору <code>throw</code>). Область видимости этого объекта ограничивается блоком <code>catch</code>.</p>
+<p>Блок <code>catch</code> задаёт идентификатор (<code>e</code> в примере выше) который содержит объект исключения (в примере выше — значение, переданное оператору <code>throw</code>). Область видимости этого объекта ограничивается блоком <code>catch</code>.</p>
 
 <h3 id="Условный_блок_catch">Условный блок <code>catch</code></h3>
 
@@ -107,7 +107,7 @@ catch (e) {
   }
 }</pre>
 
-<p>Частый сценарий использованя — обработать известные исключения, а при неизвестных ошибках, пробросить их дальше:</p>
+<p>Частый сценарий использования — обработать известные исключения, а при неизвестных ошибках, пробросить их дальше:</p>
 
 <pre class="brush: js">try {
   myRoutine();
@@ -143,7 +143,7 @@ catch (e) {
 
 <h3 id="Идентификатор_исключения">Идентификатор исключения</h3>
 
-<p>Когда в блоке <code>try</code> выбрасывается исключение, <code>exception_var</code> (т. е. <code>e</code> в конструкции <code>catch (e)</code>) содержит значение исключения. Его можно использовать, чтобы получить больше информации об выброшенном исключении. Идентификатор доступен только в <a href="https://wiki.developer.mozilla.org/docs/Glossary/Scope">области видимости</a> блока <code>catch</code>.</p>
+<p>Когда в блоке <code>try</code> выбрасывается исключение, <code>exception_var</code> (т. е. <code>e</code> в конструкции <code>catch (e)</code>) содержит значение исключения. Его можно использовать, чтобы получить больше информации об выброшенном исключении. Идентификатор доступен только в <a href="/docs/Glossary/Scope">области видимости</a> блока <code>catch</code>.</p>
 
 <pre class="brush: js">try {
   if (!firstValidation()) {
@@ -153,7 +153,7 @@ catch (e) {
     throw 2;
   }
 } catch (e) {
-  // Выводит 1 или 2 (если не произошло никакх других ошибок)
+  // Выводит 1 или 2 (если не произошло никаких других ошибок)
   console.log(e);
 }</pre>
 
@@ -200,7 +200,7 @@ window.removeEventListener('scroll', expensiveCalculations)</pre>
 
 </pre>
 
-<p>Другой пример: работа с файлами. В следующем фрагменте кода показывается, как скрипт открывает файл и записывает в него какие-то данные (в серверном окружении JavaScript имеет доступ к файловой системе). Во время записи может произойти ошибка. Но после открытия файл очень важно закрыть, потому что незакрытый файл может привести к утечкам памяти. В таких случях используется блок <code>finally</code>:</p>
+<p>Другой пример: работа с файлами. В следующем фрагменте кода показывается, как скрипт открывает файл и записывает в него какие-то данные (в серверном окружении JavaScript имеет доступ к файловой системе). Во время записи может произойти ошибка. Но после открытия файл очень важно закрыть, потому что незакрытый файл может привести к утечкам памяти. В таких случаях используется блок <code>finally</code>:</p>
 
 <pre class="brush: js">openMyFile();
 try {
@@ -345,76 +345,9 @@ catch (e) {
 
 <h2 id="Совместимость">Совместимость</h2>
 
-<p>{{CompatibilityTable}}</p>
+<p>{{Compat}}</p>
 
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("6")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>Conditional clauses<br>
-    (non-standard)</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>Conditional clauses<br>
-    (non-standard)</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h2 id="См._также">См. также</h2>
+<h2 id="Смотрите_также">Смотрите также</h2>
 
 <ul>
  <li>{{jsxref("Error")}}</li>

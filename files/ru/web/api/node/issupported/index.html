@@ -5,7 +5,7 @@ translation_of: Web/API/Node/isSupported
 ---
 <p>{{APIRef("DOM")}}{{obsolete_header}}</p>
 
-<p><code><strong>Node.isSupported()</strong></code> возвращает {{domxref("Boolean")}} флаг содержащий результат проверки реализует ли реализация DOM определенное свойство и поддерживается ли это свойство конкретным узлом.</p>
+<p><code><strong>Node.isSupported()</strong></code> возвращает {{domxref("Boolean")}} флаг содержащий результат проверки реализует ли реализация DOM определённое свойство и поддерживается ли это свойство конкретным узлом.</p>
 
 <h2 id="Syntax" name="Syntax">Синтаксис</h2>
 
@@ -15,7 +15,7 @@ translation_of: Web/API/Node/isSupported
 
 <dl>
  <dt><em>feature</em></dt>
- <dd>Это {{domxref("DOMString")}} содержащая имя свойства для проверки. Это тоже имя, которое может быть передано в метод <code>hasFeature</code> в <a href="/en/DOM/document.implementation" title="en/DOM/document.implementation">DOMImplementation</a>. Возможные значения определенные в спецификации ядра DOM перечислены в DOM Level 2 <a class="external" href="http://www.w3.org/TR/DOM-Level-2-Core/introduction.html#ID-Conformance">соответствующий раздел</a>.</dd>
+ <dd>Это {{domxref("DOMString")}} содержащая имя свойства для проверки. Это тоже имя, которое может быть передано в метод <code>hasFeature</code> в <a href="/en/DOM/document.implementation" title="en/DOM/document.implementation">DOMImplementation</a>. Возможные значения определённые в спецификации ядра DOM перечислены в DOM Level 2 <a class="external" href="http://www.w3.org/TR/DOM-Level-2-Core/introduction.html#ID-Conformance">соответствующий раздел</a>.</dd>
  <dt><em>version</em></dt>
  <dd>Это {{domxref("DOMString")}} содержащая номер версии свойства для ис проверки.В DOM уровень 2, version 1, это строка <code>2.0</code>. если версия не указана, поддерживает любую версию свойства, вызывает метод и возвращает true.</dd>
 </dl>
@@ -39,7 +39,7 @@ translation_of: Web/API/Node/isSupported
   <tr>
    <th scope="col">Спецификация</th>
    <th scope="col">Статус</th>
-   <th scope="col">Коментарий</th>
+   <th scope="col">Комментарий</th>
   </tr>
  </thead>
  <tbody>
@@ -63,59 +63,7 @@ translation_of: Web/API/Node/isSupported
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Свойство</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Базовая поддержка</td>
-   <td>{{CompatUnknown}}</td>
-   <td>Поддерживается от {{CompatGeckoDesktop("1.0")}} до {{CompatGeckoDesktop("21.0")}}.<br>
-    Удалено в {{CompatGeckoDesktop("22.0")}} [1]</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Свойство</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Базовая поддержка</td>
-   <td>{{CompatUnknown}}</td>
-   <td>Поддерживается от {{CompatGeckoMobile("1.0")}} до {{CompatGeckoMobile("21.0")}}.<br>
-    Удалено в {{CompatGeckoMobile("22.0")}} [1]</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h3 id="Gecko-специфичные_замечания">Gecko-специфичные замечания</h3>
-
-<p>[1] Начиная с Gecko 19.0 {{geckoRelease("19.0")}} этот метод всегда будет возвращать true ({{bug("801425")}}) и начиная с Gecko 22.0 {{geckoRelease("22.0")}} этот метод был удален.</p>
+<p>{{Compat("api.Node.isSupported")}}</p>
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 

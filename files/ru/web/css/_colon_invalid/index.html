@@ -9,9 +9,9 @@ translation_of: 'Web/CSS/:invalid'
 
 <h2 id="Описание">Описание</h2>
 
-<p>CSS <a href="/ru/docs/Web/CSS/Псевдо-классы" title="Pseudo-classes">псевдо-класс</a> <code>:invalid</code> находит любые {{ HTMLElement("input") }} или {{ HTMLElement("form") }} элементы, контент которых не проходит <a href="/ru/docs/Web/Guide/HTML/HTML5/Constraint_validation" title="en/HTML/HTML5/Constraint_validation">валидацию</a>, в соответствии с типом поля. Он позволяет вам легко менять внешний вид полей, что позволяет пользователю видеть и исправлять ошибки.</p>
+<p>CSS <a href="/ru/docs/Web/CSS/Псевдо-классы" title="Pseudo-classes">псевдокласс</a> <code>:invalid</code> находит любые {{ HTMLElement("input") }} или {{ HTMLElement("form") }} элементы, контент которых не проходит <a href="/ru/docs/Web/Guide/HTML/HTML5/Constraint_validation" title="en/HTML/HTML5/Constraint_validation">валидацию</a>, в соответствии с типом поля. Он позволяет вам легко менять внешний вид полей, что позволяет пользователю видеть и исправлять ошибки.</p>
 
-<p>По умолчанию, Gecko не применяет стили к псевдо-классу <code>:invalid</code>. Однако, применяет стили (красное "свечение", используя свойство {{ Cssxref("box-shadow") }}) к псевдо-классу {{ Cssxref(":-moz-ui-invalid") }}, который применяется в подгруппе случаев для <code>:invalid</code>.</p>
+<p>По умолчанию, Gecko не применяет стили к псевдоклассу <code>:invalid</code>. Однако, применяет стили (красное "свечение", используя свойство {{ Cssxref("box-shadow") }}) к псевдоклассу {{ Cssxref(":-moz-ui-invalid") }}, который применяется в подгруппе случаев для <code>:invalid</code>.</p>
 
 <p>Вы можете отключить свечение, используя следующий CSS или полностью изменить внешний вид некорректных полей.</p>
 
@@ -32,7 +32,7 @@ translation_of: 'Web/CSS/:invalid'
 
 <h4 id="Радиокнопки">Радиокнопки</h4>
 
-<p>Если любая из радиокнопок в группе (т.е., с одинаковым атрибутом <code>name</code>) имеет атрибут <code>required</code>, псевдо-класс <code>:invalid</code> применяется ко всем из них, если ни одна из кнопок группы не выбрана.</p>
+<p>Если любая из радиокнопок в группе (т.е., с одинаковым атрибутом <code>name</code>) имеет атрибут <code>required</code>, псевдокласс <code>:invalid</code> применяется ко всем из них, если ни одна из кнопок группы не выбрана.</p>
 
 <h2 id="Example2" name="Example2">Пример</h2>
 
@@ -103,76 +103,14 @@ input:required {
   <tr>
    <td>{{ SpecName('CSS3 Basic UI', '#pseudo-validity', ':invalid') }}</td>
    <td>{{ Spec2('CSS3 Basic UI') }}</td>
-   <td>Определяет псевдо-класс, но не семантику.</td>
+   <td>Определяет псевдокласс, но не семантику.</td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Возможность</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Базовая поддержка ({{ HTMLElement("input") }})</td>
-   <td>10.0</td>
-   <td>{{ CompatGeckoDesktop("2") }}</td>
-   <td>10</td>
-   <td>10.0</td>
-   <td>5.0</td>
-  </tr>
-  <tr>
-   <td>Применяется к {{ HTMLElement("form") }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatGeckoDesktop("13") }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Возможность</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Базовая поддержка</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatGeckoMobile("2") }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>10.0</td>
-   <td>5.0</td>
-  </tr>
-  <tr>
-   <td>Применяется к {{ HTMLElement("form") }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatGeckoMobile("13") }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+<p>{{Compat("css.selectors.invalid")}}</p>
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 

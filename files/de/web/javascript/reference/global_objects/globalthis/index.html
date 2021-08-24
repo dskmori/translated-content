@@ -40,7 +40,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/globalThis
 
 <h3 id="Umgebungsübergreifend_den_globalen_Kontext_finden">Umgebungsübergreifend den globalen Kontext finden</h3>
 
-<p><span class="tlid-translation translation" lang="de"><span title="">Vor <code>globalThis</code> war <code>Function('return this')()</code> die einzige zuverlässige, plattformübergreifende Methode, um das globale Objekt für eine Umgebung abzurufen.</span> <span title="">Dies führt jedoch in einigen Einstellungen zu </span></span> <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/HTTP/CSP">CSP </a><span class="tlid-translation translation" lang="de"><span title="">Verstößen. Daher verwendet </span></span> <a href="https://github.com/paulmillr/es6-shim">es6-shim</a><span class="tlid-translation translation" lang="de"><span title=""> eine Prüfung wie diese:</span></span></p>
+<p><span class="tlid-translation translation" lang="de"><span title="">Vor <code>globalThis</code> war <code>Function('return this')()</code> die einzige zuverlässige, plattformübergreifende Methode, um das globale Objekt für eine Umgebung abzurufen.</span> <span title="">Dies führt jedoch in einigen Einstellungen zu </span></span> <a href="/en-US/docs/Web/HTTP/CSP">CSP </a><span class="tlid-translation translation" lang="de"><span title="">Verstößen. Daher verwendet </span></span> <a href="https://github.com/paulmillr/es6-shim">es6-shim</a><span class="tlid-translation translation" lang="de"><span title=""> eine Prüfung wie diese:</span></span></p>
 
 <pre class="brush: js notranslate">var getGlobal = function () {
   if (typeof self !== 'undefined') { return self; }
@@ -82,12 +82,6 @@ if (typeof globals.setTimeout !== 'function') {
 
 
 <p>{{Compat("javascript.builtins.globalThis")}}</p>
-
-<h3 id="Implementierungsfortschritt"><span class="tlid-translation translation" lang="de"><span title="">Implementierungsfortschritt</span></span></h3>
-
-<p><span class="tlid-translation translation" lang="de"><span title="">Die folgende Tabelle enthält einen täglichen Implementierungsstatus für dieses Feature, da sie noch keine browserübergreifende Standardisierung erreicht hat.</span> <span title="">Die Daten werden generiert, indem die relevanten Funktionstests in </span></span><a href="https://github.com/tc39/test262">Test262</a><span class="tlid-translation translation" lang="de"><span title="">, der Standard-Testsuite von JavaScript, im nächtlichen Build oder in der neuesten Version der JavaScript-Engine jedes Browsers ausgeführt werden.</span></span></p>
-
-<div>{{EmbedTest262ReportResultsTable("globalThis")}}</div>
 
 <h2 id="Siehe_auch">Siehe auch</h2>
 

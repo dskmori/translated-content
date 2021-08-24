@@ -15,18 +15,18 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/compile
 
 <dl>
  <dt><em>bufferSource</em></dt>
- <dd>Типированный массив <a href="/en-US/docs/Web/JavaScript/Typed_arrays">typed array</a> или <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a>, содержащий двоичный код модуля <code>.wasm</code>, который вы хотите скомпилировать.</dd>
+ <dd>Типизированный массив <a href="/en-US/docs/Web/JavaScript/Typed_arrays">typed array</a> или <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a>, содержащий двоичный код модуля <code>.wasm</code>, который вы хотите скомпилировать.</dd>
 </dl>
 
 <h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
 
-<p>Обещание, (<code>Promise</code>), которое разрешает объект {{jsxref("WebAssembly.Module")}}, представляющий скомпилированный модуль.</p>
+<p>Промис (<code>Promise</code>), который разрешает объект {{jsxref("WebAssembly.Module")}}, представляющий скомпилированный модуль.</p>
 
 <h3 id="Исключения">Исключения</h3>
 
 <ul>
  <li>Если <code>bufferSource</code> не является <a href="/en-US/docs/Web/JavaScript/Typed_arrays">typed array</a>, генерируется {{jsxref("TypeError")}}.</li>
- <li>Если компиляция не удалась, обещание отклоняется с помощью {{jsxref("WebAssembly.CompileError")}}.</li>
+ <li>Если компиляция не удалась, промис отклоняется с помощью {{jsxref("WebAssembly.CompileError")}}.</li>
 </ul>
 
 <h2 id="Примеры">Примеры</h2>
@@ -44,7 +44,7 @@ fetch('simple.wasm').then(response =&gt;
 );</pre>
 
 <div class="note">
-<p><strong>Заметка:</strong> Вероятно, вы захотите использовать {{jsxref("WebAssembly.compileStreaming()")}} в большинстве случаев, поскольку он более эффективен, чем <code>compile()</code>.</p>
+<p><strong>Примечание:</strong> Вероятно, вы захотите использовать {{jsxref("WebAssembly.compileStreaming()")}} в большинстве случаев, поскольку он более эффективен, чем <code>compile()</code>.</p>
 </div>
 
 <h2 id="Характеристики">Характеристики</h2>
@@ -69,8 +69,6 @@ fetch('simple.wasm').then(response =&gt;
 <h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузером</h2>
 
 <div>
-<div class="hidden">Таблица совместимости на этой странице создается из структурированных данных. Если вы хотите внести свой вклад в данные, ознакомьтесь с <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> и отправьте нам запрос на перенос.</div>
-
 <p>{{Compat("javascript.builtins.WebAssembly.compile")}}</p>
 </div>
 

@@ -19,11 +19,11 @@ translation_of: Web/API/Document/getElementsByTagName
 <pre class="syntaxbox">var <var>elements</var> = document.getElementsByTagName(<em>name</em>);</pre>
 
 <ul>
- <li><code>elements</code> это живая {{domxref("HTMLCollection")}} (с учетом примечания внизу) найденных документов в таком порядке в каком они появляются в дереве.</li>
+ <li><code>elements</code> это живая {{domxref("HTMLCollection")}} (с учётом примечания внизу) найденных документов в таком порядке в каком они появляются в дереве.</li>
  <li><code>name</code> строка представляющая собой имя элемента. Специальная строка "*" позволяет получить все элементы.</li>
 </ul>
 
-<div class="note"><strong>Примечание:</strong> <a href="https://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html" title="https://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html">Последняя W3C спецификация</a> говорит что <code>elements</code> является <code>HTMLCollection</code>; между тем, данный метод возвращает {{domxref("NodeList")}} в WebKit браузерах. См. {{bug(14869)}} для большей информации.</div>
+<div class="note"><strong>Примечание:</strong> <a href="https://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html">Последняя W3C спецификация</a> говорит что <code>elements</code> является <code>HTMLCollection</code>; между тем, данный метод возвращает {{domxref("NodeList")}} в WebKit браузерах. См. {{bug(14869)}} для большей информации.</div>
 
 <h2 id="Примеры">Примеры</h2>
 
@@ -91,7 +91,7 @@ translation_of: Web/API/Document/getElementsByTagName
 
 <h2 id="Примечания">Примечания</h2>
 
-<p>Когда вызывается на HTML document, <code>getElementsByTagName()</code> переводит в нижний регистр свой аргумент перед работой. Это может быть неожиданным при попытке найти соответствие для camelCase SVG элементов в поддереве HTML документа. В таком случае может быть полезен {{Domxref("document.getElementsByTagNameNS()")}}. См. также {{Bug(499656)}}.</p>
+<p>Когда вызывается на HTML document, <code>getElementsByTagName()</code> переводит в нижний регистр свой аргумент перед работой. Это может быть неожиданным при попытке найти соответствие для camelCase SVG элементов в поддереве HTML документа. В таком случае может быть полезен {{Domxref("document.getElementsByTagNameNS()")}}. Смотрите также {{Bug(499656)}}.</p>
 
 <p><code>document.getElementsByTagName()</code> подобен {{domxref("element.getElementsByTagName()")}}, за исключением того что поиск охватывает весь документ.</p>
 

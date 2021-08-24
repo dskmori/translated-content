@@ -71,14 +71,14 @@ transform: unset;
 
 <dl>
  <dt>{{cssxref("&lt;transform-function&gt;")}}</dt>
- <dd>Une ou plusieurs <a href="/fr/docs/Web/CSS/transform-function">fonctions de transformation CSS</a> à appliquer. Les transformations qui sont composées entre elles sont appliquées dans l'ordre, de gauche à droite.</dd>
+ <dd>Une ou plusieurs <a href="/fr/docs/Web/CSS/transform-function">fonctions de transformation CSS</a> à appliquer. Les transformations sont composées entre elles de gauche à droite, ce qui signifie que les transformations composées sont en pratique appliquées de droite à gauche.</dd>
  <dt><code>none</code></dt>
  <dd>Aucune transformation ne sera appliquée.</dd>
 </dl>
 
 <h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
 
-<pre class="syntaxbox">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <div class="blockIndicator note">
 <p><strong>Note :</strong> Si on utilise plusieurs fonctions dont <code><a href="/fr/docs/Web/CSS/transform-function/perspective">perspective()</a></code>, celle-ci devra apparaître en premier.</p>
@@ -146,8 +146,6 @@ transform: unset;
 <p>{{cssinfo}}</p>
 
 <h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
-
-<div class="hidden">Ce tableau de compatibilité a été généré à partir de données structurées. Si vous souhaitez contribuer à ces données, n'hésitez pas à envoyer une <em>pull request</em> sur <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>.</div>
 
 <p>{{Compat("css.properties.transform")}}</p>
 

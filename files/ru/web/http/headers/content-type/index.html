@@ -8,7 +8,7 @@ original_slug: Web/HTTP/Заголовки/Content-Type
 
 <p>Заголовок-сущность <strong><code>Content-Type</code></strong> используется для того, чтобы определить {{Glossary("MIME type","MIME тип")}} ресурса.</p>
 
-<p>В ответах сервера заголовок <code>Content-Type</code> сообщает клиенту, какой будет тип передаваемого контента. В некоторых случаях браузеры пытаются сами определить MIME тип передаваемого контента, но их реакция может быть неадекватной. Чтобы предотвратить такие ситуации, Вы можете установить в заголовке {{HTTPHeader("X-Content-Type-Options")}} значение <code>nosniff</code>.</p>
+<p>В ответах сервера заголовок <code>Content-Type</code> сообщает клиенту, какой будет тип передаваемого контента. В некоторых случаях браузеры пытаются сами определить MIME тип передаваемого контента, но их реакция может быть неадекватной. Чтобы предотвратить такие ситуации, вы можете установить в заголовке {{HTTPHeader("X-Content-Type-Options")}} значение <code>nosniff</code>.</p>
 
 <p>В запросах (таких, как {{HTTPMethod("POST")}} или {{HTTPMethod("PUT")}}), клиент сообщает серверу тип отправляемых данных.</p>
 
@@ -97,9 +97,6 @@ Content-Type: text/plain
 </table>
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
-
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-
 <p>{{Compat("http.headers.Content-Type")}}</p>
 
 <h2 id="Смотрите_также">Смотрите также</h2>

@@ -29,7 +29,7 @@ translation_of: Web/Manifest/start_url
  </tbody>
 </table>
 
-<p><dfn><code>start_url</code></dfn> является строкой, представляющей начальный URL-адрес веб-приложения — tпредпочтительный URL-адрес, который должен быть загружен при запуске пользователем веб-приложения (например, когда пользователь нажимает на значок веб-приложения в меню приложений или на домашнем экране).</p>
+<p><dfn><code>start_url</code></dfn> является строкой, представляющей начальный URL-адрес веб-приложения — предпочтительный URL-адрес, который должен быть загружен при запуске пользователем веб-приложения (например, когда пользователь нажимает на значок веб-приложения в меню приложений или на домашнем экране).</p>
 
 <div class="blockIndicator note">
 <p><strong>Note:</strong> <code>start_url</code> носит чисто рекомендательный характер, и пользовательский агент может его игнорировать или разрешить пользователю изменять его во время установки или после.</p>
@@ -39,14 +39,14 @@ translation_of: Web/Manifest/start_url
 
 <h3 id="Absolute_URL">Absolute URL</h3>
 
-<pre class="brush: json" dir="rtl"><code>"start_url": "https://example.com"</code>
+<pre class="brush: json"><code>"start_url": "https://example.com"</code>
 </pre>
 
 <h3 id="Relative_URL">Relative URL</h3>
 
 <p>Если URL является относительным, для его разрешения используется URL манифеста.</p>
 
-<pre class="brush: json" dir="rtl"><code>"start_url": "../startpoint.html"</code>
+<pre class="brush: json"><code>"start_url": "../startpoint.html"</code>
 </pre>
 
 <h2 id="Specifications">Specifications</h2>
@@ -79,9 +79,5 @@ translation_of: Web/Manifest/start_url
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-<div class="hidden">
-<p>The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-</div>
 
 <p>{{Compat("html.manifest.start_url")}}</p>

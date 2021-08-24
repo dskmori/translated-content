@@ -12,11 +12,12 @@ tags:
   - TopicStub
 translation_of: Web/CSS/@viewport
 ---
-<p>{{CSSRef}}</p>
+<div>{{CSSRef}}{{deprecated_header}}</div>
+
 
 <h2 id="Кратко">Кратко</h2>
 
-<p><strong><code>@viewport</code></strong> <a href="/en/CSS" title="CSS">CSS</a> <a href="/en/CSS/At-rule" title="en/CSS/At-rule">at-rule</a> cсодержит набор вложенных дескрипторов в блоке CSS, который разделен фигурными скобками. Эти дескрипторы управляют настройками видового экрана, в первую очередь на мобильных устройствах.</p>
+<p><strong><code>@viewport</code></strong> <a href="/en/CSS" title="CSS">CSS</a> <a href="/en/CSS/At-rule" title="en/CSS/At-rule">at-rule</a> содержит набор вложенных дескрипторов в блоке CSS, который разделён фигурными скобками. Эти дескрипторы управляют настройками видового экрана, в первую очередь на мобильных устройствах.</p>
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
@@ -32,13 +33,13 @@ translation_of: Web/CSS/@viewport
  <dt><a href="/en-US/docs/Web/CSS/@viewport/max-width"><code>max-width</code></a></dt>
  <dd>Используется при определении ширины видового экрана при первом отображении документа.</dd>
  <dt><a href="/en-US/docs/Web/CSS/@viewport/width"><code>width</code></a></dt>
- <dd>Сокращенный дескриптор для установки как минимальной ширины(min-width), так и максимальной ширины(max-width).</dd>
+ <dd>Сокращённый дескриптор для установки как минимальной ширины(min-width), так и максимальной ширины(max-width).</dd>
  <dt><a href="/en-US/docs/Web/CSS/@viewport/min-height"><code>min-height</code></a></dt>
  <dd>Используется при определении высоты видового экрана при первом отображении документа.</dd>
  <dt><a href="/en-US/docs/Web/CSS/@viewport/max-height"><code>max-height</code></a></dt>
  <dd>Используется при определении высоты видового экрана при первом отображении документа.</dd>
  <dt><a href="/en-US/docs/Web/CSS/@viewport/height"><code>height</code></a></dt>
- <dd>Сокращенный дескриптор для установки как минимальной высоты(min-height), так и максимальной высоты(max-height).</dd>
+ <dd>Сокращённый дескриптор для установки как минимальной высоты(min-height), так и максимальной высоты(max-height).</dd>
  <dt><a href="/en-US/docs/Web/CSS/@viewport/zoom"><code>zoom</code></a></dt>
  <dd>Устанавливает начальный коэффициент масштабирования.</dd>
  <dt><a href="/en-US/docs/Web/CSS/@viewport/min-zoom"><code>min-zoom</code></a></dt>
@@ -54,7 +55,7 @@ translation_of: Web/CSS/@viewport
 
 <h3 id="Формальный_синтаксис">Формальный синтаксис</h3>
 
-<pre class="syntaxbox">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <h2 id="Пример">Пример:</h2>
 
@@ -92,67 +93,7 @@ translation_of: Web/CSS/@viewport
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами:</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>29 (behind a flag) [4]</td>
-   <td>{{CompatNo()}} [2]</td>
-   <td>10 {{property_prefix("-ms")}}</td>
-   <td>11.10<br>
-    Removed in 15<br>
-    Reintroduced behind a flag in 16</td>
-   <td>{{CompatNo}} [3]</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>4.4</td>
-   <td>29</td>
-   <td>{{CompatNo}} [2]</td>
-   <td>10{{property_prefix("-ms")}}[1]</td>
-   <td>11.10<br>
-    Removed in 15<br>
-    Reintroduced behind a flag in 16</td>
-   <td>{{CompatNo}} [3]</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] существует ошибка в IE Mobile 10 и на более старых версиях Windows Phone 8, где<code>device-width</code>, при использовании внутри <code>@-ms-viewport</code>, оценивает ширину экрана в физических пикселях, а не в нормализованных CSS-пикселях, что неверно в соответствии со спецификацией. Однако, при использовании в<code>viewport</code> {{HTMLElement("meta")}} тэг, <code>device-width</code> оценивает правильно. По данным Microsoft, эта ошибка была исправлена в <a href="http://blogs.windows.com/windows_phone/b/wpdev/archive/2013/10/14/introducing-windows-phone-preview-for-developers.aspx">Windows Phone 8 Update 3 (a.k.a. GDR3)</a>, хотя есть некоторые сообщения о том, что <a href="http://www.nokia.com/us-en/windows-phone-black-update/">Lumia Black</a> Обновление GDR3 не исправило ошибку (по крайней мере, на Lumia 920). Для получения более подробной информации и обходного пути, <a href="http://timkadlec.com/2013/01/windows-phone-8-and-device-width/">see Tim Kadlec's blog post "Windows Phone 8 and Device-Width"</a>.</p>
-
-<p>[2]: See {{bug(747754, 'summary')}}</p>
-
-<p>[3]: See {{webkitbug(95959)}}</p>
-
-<p>[4]: See <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=235457">Chromium issue #235457: Enable @viewport on all platforms</a></p>
+<p>{{Compat("css.at-rules.viewport")}}</p>
 
 <h2 id="Смотреть_также">Смотреть также</h2>
 

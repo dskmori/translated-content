@@ -48,18 +48,18 @@ translation_of: Web/API/WorkerGlobalScope
 
 <dl>
  <dt>{{domxref("WorkerGlobalScope.onerror")}}</dt>
- <dd>{{event("error")}} イベントが発生したときに呼び出されるコードを表す {{domxref("EventHandler")}}。</dd>
+ <dd>{{event("error")}} イベントが発生したときに呼び出されるコードを表す {{event("Event_handlers", "event handler")}}。</dd>
  <dt>{{domxref("WorkerGlobalScope.onoffline")}}</dt>
- <dd>{{event("offline")}} イベントが発生したときに呼び出されるコードを表す {{domxref("EventHandler")}}。</dd>
+ <dd>{{event("offline")}} イベントが発生したときに呼び出されるコードを表す {{event("Event_handlers", "event handler")}}。</dd>
  <dt>{{domxref("WorkerGlobalScope.ononline")}}</dt>
- <dd>{{event("online")}} イベントが発生したときに呼び出されるコードを表す {{domxref("EventHandler")}}。</dd>
+ <dd>{{event("online")}} イベントが発生したときに呼び出されるコードを表す {{event("Event_handlers", "event handler")}}。</dd>
  <dt>{{domxref("WorkerGlobalScope.onlanguagechange")}}</dt>
- <dd>ユーザーの選択言語を変更したときに、 global/worker スコープオブジェクトで発火する {{domxref("EventHandler")}}。</dd>
+ <dd>ユーザーの選択言語を変更したときに、 global/worker スコープオブジェクトで発火する {{event("Event_handlers", "event handler")}}。</dd>
 </dl>
 
 <dl>
  <dt>{{domxref("WorkerGlobalScope.onclose")}} {{non-standard_inline}}</dt>
- <dd>{{event("close")}} イベントが発生したときに呼び出されるコードを表す {{domxref("EventHandler")}}。</dd>
+ <dd>{{event("close")}} イベントが発生したときに呼び出されるコードを表す {{event("Event_handlers", "event handler")}}。</dd>
  <dt>{{domxref("WorkerGlobalScope.onrejectionhandled")}} {{non-standard_inline}}</dt>
  <dd><a href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="The Promise object is used for deferred and asynchronous computations. A Promise represents an operation that hasn't completed yet, but is expected in the future."><code>Promise</code></a> の rejection イベントを制御するためのイベントハンドラ。</dd>
  <dt>{{domxref("WorkerGlobalScope.onunhandledrejection")}} {{non-standard_inline}}</dt>
@@ -147,133 +147,7 @@ console.log(navigator);</pre>
 
 <h2 id="ブラウザ実装状況">ブラウザ実装状況</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>機能</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>基本サポート</td>
-   <td>{{CompatChrome(4)}}</td>
-   <td>{{CompatGeckoDesktop("1.9.1")}}</td>
-   <td>10</td>
-   <td>10.6</td>
-   <td>4</td>
-  </tr>
-  <tr>
-   <td><code>ononline</code>, <code>onoffline</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("29")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>console</code> {{Non-standard_inline}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("29")}}<sup>[1]</sup><br>
-    {{CompatGeckoDesktop("30")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>performance</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("34")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>caches</code></td>
-   <td>{{CompatChrome(40)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>機能</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>基本サポート</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("1.9.1")}}</td>
-   <td>1.0.1</td>
-   <td>10</td>
-   <td>11.5</td>
-   <td>5.1</td>
-  </tr>
-  <tr>
-   <td><code>ononline</code>, <code>onoffline</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("29")}}<sup>[1]</sup><br>
-    {{CompatGeckoMobile("30")}}</td>
-   <td>1.4</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>console</code> {{Non-standard_inline}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("29")}}</td>
-   <td>1.4</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>performance</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("34")}}</td>
-   <td>2.1</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>caches</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Gecko 29 ではこれを <code>WorkerConsole</code> として実装しています。バージョン 30 からは通常の <code>Console</code> を使用しています。</p>
+<p>{{Compat("api.WorkerGlobalScope")}}</p>
 
 <h2 id="関連項目">関連項目</h2>
 

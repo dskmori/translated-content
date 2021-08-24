@@ -5,9 +5,9 @@ translation_of: Web/API/Window/postMessage
 ---
 <div>{{ApiRef("HTML DOM")}}</div>
 
-<p><strong><code>Window.postMessage()</code></strong> - этот метод позволяет безопасно отправлять кроссдоменные запросы. Обычно сценариям на разных страницах разрешен доступ друг к другу только если страницы, которые их выполняли, передаются по одному  протоколу (обычно это https), номер порта (443 — по умолчанию для https) и хост (modulo {{domxref("Document.domain")}} установленный страницами на одно и тоже значение). <code>window.postMessage()</code> предоставляет контролируемый механизм, чтобы обойти это ограничение способом, который безопасен при правильном использовании.</p>
+<p><strong><code>Window.postMessage()</code></strong> - этот метод позволяет безопасно отправлять кроссдоменные запросы. Обычно сценариям на разных страницах разрешён доступ друг к другу только если страницы, которые их выполняли, передаются по одному  протоколу (обычно это https), номер порта (443 — по умолчанию для https) и хост (modulo {{domxref("Document.domain")}} установленный страницами на одно и тоже значение). <code>window.postMessage()</code> предоставляет контролируемый механизм, чтобы обойти это ограничение способом, который безопасен при правильном использовании.</p>
 
-<p><font face="Open Sans, arial, x-locale-body, sans-serif">При вызове метода </font><code>window.postMessage()</code> он вызывает {{domxref("MessageEvent")}} для отправки в целевом окне, когда завершается любой ожидающий сценарий, который должен быть выполнен (например, оставшиеся обработчики событий, если <code>window.postMessage()</code> вызвается из обработчика событий ранее заданных ожидающих таймаутов). {{domxref("MessageEvent")}} имеет тип  <code>message</code>, <code>data-свойство</code> которого устанавливает значение первого аргумента в методе <code>window.postMessage()</code>, свойство <code>origin</code>  соотвествует адресу основного документа в вызове <code>window.postMessage</code> во время  вызова <code>window.postMessage()</code>, свойство <code>source</code> указывает на окно, из которого <code>window.postMessage()</code> вызвали. (Другие стандартные свойства событий имеют ожидаемые значения)</p>
+<p><font face="Open Sans, arial, x-locale-body, sans-serif">При вызове метода </font><code>window.postMessage()</code> он вызывает {{domxref("MessageEvent")}} для отправки в целевом окне, когда завершается любой ожидающий сценарий, который должен быть выполнен (например, оставшиеся обработчики событий, если <code>window.postMessage()</code> вызывается из обработчика событий ранее заданных ожидающих таймаутов). {{domxref("MessageEvent")}} имеет тип  <code>message</code>, <code>data-свойство</code> которого устанавливает значение первого аргумента в методе <code>window.postMessage()</code>, свойство <code>origin</code>  соответствует адресу основного документа в вызове <code>window.postMessage</code> во время  вызова <code>window.postMessage()</code>, свойство <code>source</code> указывает на окно, из которого <code>window.postMessage()</code> вызвали. (Другие стандартные свойства событий имеют ожидаемые значения)</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -26,7 +26,7 @@ translation_of: Web/API/Window/postMessage
 
 <h2 id="The_dispatched_event">The dispatched event</h2>
 
-<p>В <code>otherWindow</code> отправляемые сообщения могут быть прослушаны следующим способом:</p>
+<p>В <code>otherWindow</code> отправляемые сообщения могут быть обработаны следующим способом:</p>
 
 <pre class="brush: js">window.addEventListener("message", receiveMessage, false);
 
@@ -52,9 +52,9 @@ function receiveMessage(event)
 
 <h2 id="Вопросы_безопасности">Вопросы безопасности</h2>
 
-<p><strong>Если вы не ожидаете получения сообщения от других сайтов, не добавляйте никаких слушателей для <code>message</code> событий.</strong> Это гарантированный способ избежать проблем с безопасностью.</p>
+<p><strong>Если вы не ожидаете получения сообщения от других сайтов, не добавляйте обработчики событий <code>message</code>.</strong> Это гарантированный способ избежать проблем с безопасностью.</p>
 
-<p>Если же вы хотите получать сообщения от других сайтов, то всегда необходимо идентифицировать отправителя, используя <code>origin</code> и возможно <code>source</code> свойства. Любой сайт (включая, например, <code class="nowiki">http://evil.example.com</code>) может отправлять сообщения любым другим, и у вас нет гарантии, что неизвестный отправитель не пошлет вредоносные сообщения. Однако даже если отправитель известен, вам все равно необходимо всегда подтверждать синтаксис получаемого сообщения. Иначе, дыра в безопасности сайта, которому вы доверяете, может открыть дыру для межсайтового скриптинга на вашем сайте.</p>
+<p>Если же вы хотите получать сообщения от других сайтов, то всегда необходимо идентифицировать отправителя, используя <code>origin</code> и возможно <code>source</code> свойства. Любой сайт (включая, например, <code class="nowiki">http://evil.example.com</code>) может отправлять сообщения любым другим, и у вас нет гарантии, что неизвестный отправитель не пошлёт вредоносные сообщения. Однако даже если отправитель известен, вам всё равно необходимо всегда подтверждать синтаксис получаемого сообщения. Иначе, дыра в безопасности сайта, которому вы доверяете, может открыть дыру для межсайтового скриптинга на вашем сайте.</p>
 
 <p><strong>Всегда конкретизируйте целевой первоисточник, а не просто <code>*</code>, когда вы используете <code>postMessage</code> для отправки данных другим окнам. Вредоносный сайт может изменить локацию окна без вашего ведома и затем перехватить данные, посылаемые с использованием </strong><code>postMessage</code>.</p>
 
@@ -155,86 +155,7 @@ window.addEventListener("message", receiveMessage, false);
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th><strong>Feature</strong></th>
-   <th><strong>Chrome</strong></th>
-   <th><strong>Edge</strong></th>
-   <th><strong>Firefox (Gecko)</strong></th>
-   <th><strong>Internet Explorer</strong></th>
-   <th><strong>Opera</strong></th>
-   <th><strong>Safari (WebKit)</strong></th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>1.0</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop(6.0)}}<sup>[1]</sup><br>
-    {{CompatGeckoDesktop(8.0)}}<sup>[2]</sup></td>
-   <td>8.0<sup>[3]</sup><br>
-    10.0<sup>[4]</sup></td>
-   <td>9.5</td>
-   <td>4.0</td>
-  </tr>
-  <tr>
-   <td><code>transfer</code> argument</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop(20.0)}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th><strong>Feature</strong></th>
-   <th><strong>Android</strong></th>
-   <th><strong>Edge</strong></th>
-   <th><strong>Firefox Mobile (Gecko)</strong></th>
-   <th><strong>IE Phone</strong></th>
-   <th><strong>Opera Mobile</strong></th>
-   <th><strong>Safari Mobile</strong></th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop(6.0)}}<sup>[1]</sup><br>
-    {{CompatGeckoDesktop(8.0)}}<sup>[2]</sup></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>transfer</code> argument</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile(20.0)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Prior to Gecko 6.0 {{geckoRelease("6.0")}}, the <code>message</code> parameter must be a string. Starting in Gecko 6.0 {{geckoRelease("6.0")}}, the <code>message</code> parameter is serialized using <a href="/en-US/docs/DOM/The_structured_clone_algorithm">the structured clone algorithm</a>. This means you can pass a broad variety of data objects safely to the destination window without having to serialize them yourself.</p>
-
-<p>[2] Gecko 8.0 introduced support for sending {{domxref("File")}} and {{domxref("FileList")}} objects between windows. This is only allowed if the recipient's principal is contained within the sender's principal for security reasons.</p>
-
-<p>[3] IE8 and IE9 only support it for {{HTMLElement("frame")}} and {{HTMLElement("iframe")}}.</p>
-
-<p>[4] IE10 has important limitations: see this <a href="http://stackoverflow.com/questions/16226924/is-cross-origin-postmessage-broken-in-ie10">article</a> for details.</p>
+<p>{{Compat("api.Window.postMessage")}}</p>
 
 <h2 id="See_also">See also</h2>
 

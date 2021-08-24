@@ -45,7 +45,7 @@ valueIsNaN(1);          // false
 valueIsNaN(NaN);        // true
 valueIsNaN(Number.NaN); // true</code></pre>
 
-<p>Тем не менее, обратите внимание на разницу между функцией <code>isNaN()</code> и методом <code>Number.isNaN()</code>: первая вернет <code>true</code>, если значение в настоящий момент является <code>NaN</code>, или если оно станет <code>NaN</code> после того, как преобразуется в число, в то время как последний вернет <code>true</code>, только если текущим значением является <code>NaN</code>:</p>
+<p>Тем не менее, обратите внимание на разницу между функцией <code>isNaN()</code> и методом <code>Number.isNaN()</code>: первая вернёт <code>true</code>, если значение в настоящий момент является <code>NaN</code>, или если оно станет <code>NaN</code> после того, как преобразуется в число, в то время как последний вернёт <code>true</code>, только если текущим значением является <code>NaN</code>:</p>
 
 <pre><code>isNaN('hello world');        // true
 Number.isNaN('hello world'); // false</code></pre>
@@ -83,10 +83,6 @@ Number.isNaN('hello world'); // false</code></pre>
 </table>
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
-
-<div class="hidden">
-<p>The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-</div>
 
 <p>{{Compat("javascript.builtins.NaN")}}</p>
 

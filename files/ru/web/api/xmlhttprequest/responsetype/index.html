@@ -5,7 +5,7 @@ translation_of: Web/API/XMLHttpRequest/responseType
 ---
 <p>{{APIRef('XMLHttpRequest')}}</p>
 
-<p><strong><code>XMLHttpRequest.responseType</code></strong> <font><font>Свойство является перечислимым значением, </font><font>которое возвращает тип ответа. </font><font>Он также позволяет автору изменять тип ответа. Если значение не задано, будет использовано значение по умолчанию <strong><code>text</code></strong></font></font><font><font>. </font></font><font><font>Установка значения responseType в «document» игнорируется, если выполняется в  </font></font><a href="https://developer.mozilla.org/en-US/docs/Web/API/Worker"><font><font>рабочей</font></font></a><font><font> среде. </font><font>При настройке </font></font><code>responseType</code><font><font> на определенное значение автор должен убедиться, что сервер действительно отправляет ответ, совместимый с этим форматом. Если сервер возвращает данные, которые не совместимы с установленным </font></font><code>responseType</code><font><font>, значение </font></font><code>response</code> <font><font>будет </font></font><code>null</code><font><font>. </font><font>Кроме того, установка </font></font><code>responseType</code> <font><font>для синхронных запросов вызовет исключение </font></font><code>InvalidAccessError</code><font><font>.</font></font></p>
+<p><strong><code>XMLHttpRequest.responseType</code></strong> <font><font>Свойство является перечислимым значением, </font><font>которое возвращает тип ответа. </font><font>Он также позволяет автору изменять тип ответа. Если значение не задано, будет использовано значение по умолчанию <strong><code>text</code></strong></font></font><font><font>. </font></font><font><font>Установка значения responseType в «document» игнорируется, если выполняется в  </font></font><a href="https://developer.mozilla.org/en-US/docs/Web/API/Worker"><font><font>рабочей</font></font></a><font><font> среде. </font><font>При настройке </font></font><code>responseType</code><font><font> на определённое значение автор должен убедиться, что сервер действительно отправляет ответ, совместимый с этим форматом. Если сервер возвращает данные, которые не совместимы с установленным </font></font><code>responseType</code><font><font>, значение </font></font><code>response</code> <font><font>будет </font></font><code>null</code><font><font>. </font><font>Кроме того, установка </font></font><code>responseType</code> <font><font>для синхронных запросов вызовет исключение </font></font><code>InvalidAccessError</code><font><font>.</font></font></p>
 
 <p><font><font>Поддерживаемые значения </font></font><code>responseType</code><font><font>:</font></font></p>
 
@@ -75,63 +75,4 @@ translation_of: Web/API/XMLHttpRequest/responseType
 
 <h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>31</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>12<sup>[1]</sup></td>
-   <td>10</td>
-   <td>18</td>
-   <td>7.1</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>
-    <p>4.0.3 [2]<br>
-     4.4</p>
-   </td>
-   <td>55</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>50<sup>[1]</sup></td>
-   <td>10</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Проприетарный <code>moz-blob</code> и <code>moz-chunked-text</code> значения полностью удалены в Firefox 58.</p>
-
-<p>[2] Поддерживается только <code>text</code> и <code>arraybuffer</code>.</p>
+<p>{{Compat("api.XMLHttpRequest.responseType")}}</p>

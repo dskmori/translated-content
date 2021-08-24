@@ -9,7 +9,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/BigInt
 ---
 <div>{{JSRef}}</div>
 
-<p><strong><code>BigInt</code></strong>는 {{jsxref("Number")}} 원시 값이 안정적으로 나타낼 수 있는 최대치인 2<sup>53</sup> - 1보다 큰 정수를 표현할 수 있는 내장 객체입니다.</p>
+<p><strong><code>BigInt</code></strong>는 {{jsxref("Number")}} 원시 값이 안정적으로 나타낼 수 있는 최대치인 2^53 - 1보다 큰 정수를 표현할 수 있는 내장 객체입니다.</p>
 
 <h2 id="설명">설명</h2>
 
@@ -179,9 +179,9 @@ Boolean(12n)
 
 <dl>
  <dt>{{jsxref("BigInt.asIntN()")}}</dt>
- <dd>주어진 <code>BigInt</code>를 <code>-2<sup>width-1</sup></code>과 <code>2<sup>width-1</sup> - 1</code>의 범위로 자릅니다.</dd>
+ <dd>주어진 <code>BigInt</code>를 <code>-2^(width - 1)</code>과 <code>2^(width - 1) - 1</code>의 범위로 자릅니다.</dd>
  <dt>{{jsxref("BigInt.asUintN()")}}</dt>
- <dd>주어진 <code>BigInt</code>를 <code>0</code>과 <code>2<sup>width</sup> - 1</code>의 범위로 자릅니다.</dd>
+ <dd>주어진 <code>BigInt</code>를 <code>0</code>과 <code>2^width - 1</code>의 범위로 자릅니다.</dd>
 </dl>
 
 <h2 id="인스턴스_메서드">인스턴스 메서드</h2>
@@ -199,7 +199,7 @@ Boolean(12n)
 
 <h3 id="변환">변환</h3>
 
-<p><code>BigInt</code>를 {{jsxref("Number")}}로 변환하는 과정에서 정확도를 유실할 수 있으므로, 2<sup>53</sup>보다 큰 값을 예상할 수 있는 경우 <code>BigInt</code>만 사용하는 것이 좋습니다.</p>
+<p><code>BigInt</code>를 {{jsxref("Number")}}로 변환하는 과정에서 정확도를 유실할 수 있으므로, 2^53보다 큰 값을 예상할 수 있는 경우 <code>BigInt</code>만 사용하는 것이 좋습니다.</p>
 
 <h3 id="암호화">암호화</h3>
 
@@ -266,12 +266,6 @@ nthPrime(20n)
 
 
 <p>{{Compat("javascript.builtins.BigInt")}}</p>
-
-<h3 id="구현_진척도">구현 진척도</h3>
-
-<p>본 기능은 아직 안정적인 크로스 브라우징에 도달하지 못했으므로, 매일 업데이트되는 아래 표에서 브라우저별 구현 상황을 확인할 수 있습니다. 이 데이터는 각 브라우저 JavaScript 엔진의 나이틀리 빌드 또는 최신 릴리즈판에서, JavaScript 표준 테스트인 <a href="https://github.com/tc39/test262">Test262</a>의 관련 항목을 시험해 생성합니다.</p>
-
-<p>{{EmbedTest262ReportResultsTable("BigInt")}}</p>
 
 <h2 id="같이_보기">같이 보기</h2>
 

@@ -7,9 +7,9 @@ translation_of: Web/API/Range/surroundContents
 
 <p>Метод <strong><code>Range.surroundContents()</code></strong> перемещает содержимое {{ domxref("Range") }} в новый элемент, который расположится в начале указанного диапазона.</p>
 
-<p>Этот медод приблизительно эквивалентен коду <code>newNode.appendChild(<a href="/en/DOM/range.extractContents" title="en/DOM/range.extractContents">range.extractContents()</a>); <a href="/en-US/docs/DOM/range.insertNode" title="/en-US/docs/DOM/range.insertNode">range.insertNode</a>(newNode)</code>. После его работы крайние точки диапазона будут включать в себя <code>newNode</code>.</p>
+<p>Этот метод приблизительно эквивалентен коду <code>newNode.appendChild(<a href="/en/DOM/range.extractContents" title="en/DOM/range.extractContents">range.extractContents()</a>); <a href="/en-US/docs/DOM/range.insertNode" title="/en-US/docs/DOM/range.insertNode">range.insertNode</a>(newNode)</code>. После его работы крайние точки диапазона будут включать в себя <code>newNode</code>.</p>
 
-<p>Если {{ domxref("Range") }} разделяет любой не <a href="https://developer.mozilla.org/en-US/docs/Web/API/Text">текстовый</a> элемент хотя бы одной точкой, произойдет исключение. В отличие от альтернативы выше, если в диапазоне есть частично выделенные элементы, они не будут клонированы, а вместо этого произовдет ошибка.</p>
+<p>Если {{ domxref("Range") }} разделяет любой не <a href="https://developer.mozilla.org/en-US/docs/Web/API/Text">текстовый</a> элемент хотя бы одной точкой, произойдёт исключение. В отличие от альтернативы выше, если в диапазоне есть частично выделенные элементы, они не будут клонированы, а вместо этого производит ошибка.</p>
 
 <h2 id="Syntax" name="Syntax">Синтаксис</h2>
 
@@ -56,55 +56,7 @@ range.surroundContents(newNode);
 
 <h2 id="Совместимость">Совместимость</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("1.0")}} [1]</td>
-   <td>9.0</td>
-   <td>9.0</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("1.0")}} [1]</td>
-   <td>9.0</td>
-   <td>9.0</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Firefox до версии 1.5, содержит ошибку, которая не позволяет отработать <code>Range.surroundContents</code> если начало и конец диапазона являются одним текстовым элементом ({{bug(135928)}}).</p>
+<p>{{Compat("api.Range.surroundContents")}}</p>
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 

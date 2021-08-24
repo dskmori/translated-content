@@ -31,7 +31,7 @@ class ClassWithPrivateStaticField {
 
 <p>Приватные поля доступны в конструкторе класса изнутри самой декларации класса.</p>
 
-<p>Ограничение статических переменных, вызываемых только статическими методами, все еще сохраняется.</p>
+<p>Ограничение статических переменных, вызываемых только статическими методами, все ещё сохраняется.</p>
 
 <pre class="brush: js notranslate">class ClassWithPrivateStaticField {
   static #PRIVATE_STATIC_FIELD
@@ -72,7 +72,7 @@ console.assert(error instanceof TypeError)
 
 <h3 id="Приватные_поля_экземпляров">Приватные поля экземпляров</h3>
 
-<p>Приватные поля экзмепляров объявляются <strong>#имя </strong>(произносится как "хэш нэймс"), которые идентифицируются префиксом <code><strong>#</strong></code>. <code>#</code> является частью имени, а также используется для объявления и доступа.</p>
+<p>Приватные поля экземпляров объявляются <strong>#имя </strong>(произносится как "хэш нэймс"), которые идентифицируются префиксом <code><strong>#</strong></code>. <code>#</code> является частью имени, а также используется для объявления и доступа.</p>
 
 <p><span class="tlid-translation translation" lang="ru"><span title="">Инкапсуляция обеспечивается языком.</span> <span title="">Обращение к <code>#</code> именам вне области видимости является синтаксической ошибкой.</span></span></p>
 
@@ -139,7 +139,7 @@ console.log(Derived.publicStaticMethod2()); // TypeError
 
 <h4 id="Приватные_методы_экземпляровinstance">Приватные методы экземпляров(instance)</h4>
 
-<p>Приватные методы экземпляров это методы, доступные у экземпляров класса, доступ к которым запрещен также, как у приватных полей класса.</p>
+<p>Приватные методы экземпляров это методы, доступные у экземпляров класса, доступ к которым запрещён также, как у приватных полей класса.</p>
 
 <pre class="brush: js notranslate">class ClassWithPrivateMethod {
   #privateMethod() {
@@ -194,11 +194,9 @@ new ClassWithPrivateAccessor();
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
 
-<div class="hidden">Таблица совместимости на этой странице составлена из структурированных данных. Если Вы хотите внести свой вклад в данные, пожалуйста, посетите https://github.com/mdn/browser-compat-data и отправьте нам запрос.</div>
-
 <p>{{Compat("javascript.classes.private_class_fields")}}</p>
 
-<h2 id="См._также">См. также</h2>
+<h2 id="Смотрите_также">Смотрите также</h2>
 
 <ul>
  <li><a href="/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields">Public class fields</a></li>

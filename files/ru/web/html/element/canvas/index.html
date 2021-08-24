@@ -15,7 +15,7 @@ translation_of: Web/HTML/Element/canvas
   </tr>
   <tr>
    <th scope="row">Permitted content</th>
-   <td>Transparent но без <a href="/en-US/docs/HTML/Content_categories#Interactive_content">interactive content</a> descendants except(соглашаться?) для {{HTMLElement("a")}} елементы, {{HTMLElement("button")}} елементы, {{HTMLElement("input")}} елементы как {{htmlattrxref("type", "input")}} атрибут is <code>checkbox</code>, <code>radio</code>, или <code>button</code>.</td>
+   <td>Transparent но без <a href="/en-US/docs/HTML/Content_categories#Interactive_content">interactive content</a> descendants except(соглашаться?) для {{HTMLElement("a")}} элементы, {{HTMLElement("button")}} элементы, {{HTMLElement("input")}} элементы как {{htmlattrxref("type", "input")}} атрибут is <code>checkbox</code>, <code>radio</code>, или <code>button</code>.</td>
   </tr>
   <tr>
    <th scope="row">Tag omission</th>
@@ -38,11 +38,11 @@ translation_of: Web/HTML/Element/canvas
 
 <dl>
  <dt>{{htmlattrdef("height")}}</dt>
- <dd>Высота в координантном пространстве в CSS пикселях. По умолчанию 150.</dd>
+ <dd>Высота в координатном пространстве в CSS пикселях. По умолчанию 150.</dd>
  <dt>{{htmlattrdef("moz-opaque")}} {{non-standard_inline}}</dt>
  <dd>Дай холсту знать будет ли фактором или нет полупрозрачность. Если холст знает что нет полупрозрачности, производительность рисования может быть оптимизирована.</dd>
  <dt>{{htmlattrdef("width")}}</dt>
- <dd>Ширина в координантном пространстве в CSS пикселях. По умолчанию 300.</dd>
+ <dd>Ширина в координатном пространстве в CSS пикселях. По умолчанию 300.</dd>
 </dl>
 
 <h2 id="Описание">Описание</h2>
@@ -92,85 +92,9 @@ translation_of: Web/HTML/Element/canvas
 
 <h2 id="Совместимость_браузеров">Совместимость браузеров</h2>
 
-<p>{{CompatibilityTable}}</p>
+<p>{{Compat("html.elements.canvas")}}</p>
 
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>1.0</td>
-   <td>{{CompatGeckoDesktop("1.8")}}<sup>[1]</sup><br>
-    {{CompatGeckoDesktop("6.0")}}<sup>[2]</sup><br>
-    {{CompatGeckoDesktop("12.0")}}<sup>[3]</sup></td>
-   <td>9.0</td>
-   <td>9.0<sup>[4]</sup></td>
-   <td>2.0<sup>[5]</sup></td>
-  </tr>
-  <tr>
-   <td><code>moz-opaque</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoDesktop("1.9.1")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Android</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatGeckoDesktop("1.8")}}<sup>[1]</sup><br>
-    {{CompatGeckoDesktop("6.0")}}<sup>[2]</sup><br>
-    {{CompatGeckoDesktop("12.0")}}<sup>[3]</sup></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>1.0</td>
-  </tr>
-  <tr>
-   <td><code>moz-opaque</code></td>
-   <td>{{CompatGeckoMobile("1.9.1")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Before Gecko 5.0 {{geckoRelease("5.0")}}, the canvas ширина и высота were signed integers instead of unsigned integers.</p>
-
-<p>[2] Prior to Gecko 6.0 {{geckoRelease("6.0")}}, a {{HTMLElement("canvas")}} element with a zero width or height would be rendered as if it had default dimensions.</p>
-
-<p>[3] Before Gecko 12.0 {{geckoRelease("12.0")}}, если JavaScript is disabled, the <code>&lt;canvas&gt;</code> element was being rendered instead of showing the fallback content as per the <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-canvas-element.html">specification</a>. Сейчас the fallback контент is rendered instead.</p>
-
-<p>[4] See the <a href="http://www.opera.com/docs/changelogs/windows/900/">changelog for Opera 9.0</a>.</p>
-
-<p>[5] Although early versions of Apple's Safari browser don't require the closing tag, the specification indicates that it is required, so you should be sure to include it for broadest compatibility. Those versions of Safari (prior to version 2.0) will render the content of the fallback in addition to the canvas itself unless you use CSS tricks to mask it. Fortunately, users of these versions of Safari are rare nowadays.</p>
-
-<h2 id="См.также">См.также</h2>
+<h2 id="Смотрите_также">Смотрите также</h2>
 
 <ul>
  <li><a href="/en-US/docs/Web/API/Canvas_API">MDN canvas portal</a></li>

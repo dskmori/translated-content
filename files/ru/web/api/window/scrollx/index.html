@@ -5,7 +5,7 @@ translation_of: Web/API/Window/scrollX
 ---
 <div>{{ APIRef("CSSOM View") }}</div>
 
-<p><code><strong>scrollX</strong></code> — свойство только для чтения интерфейса {{domxref("Window")}}. Возвращает число пикселей, на которое документ пролистали в данный момент по горизонтали. В современных браузерах это значение является точным числом субпикселей, что означает отсутствие необходимости в полном значении количества пикселей. Вы можете получить количество  пикселей, пролистаных по вертикали с помощью свойства {{domxref("Window.scrollY", "scrollY")}} .</p>
+<p><code><strong>scrollX</strong></code> — свойство только для чтения интерфейса {{domxref("Window")}}. Возвращает число пикселей, на которое документ пролистали в данный момент по горизонтали. В современных браузерах это значение является точным числом субпикселей, что означает отсутствие необходимости в полном значении количества пикселей. Вы можете получить количество  пикселей, пролистанных по вертикали с помощью свойства {{domxref("Window.scrollY", "scrollY")}} .</p>
 
 <h2 id="Syntax" name="Syntax">Синтаксис</h2>
 
@@ -33,7 +33,7 @@ translation_of: Web/API/Window/scrollX
   window.scroll(0,0);
 }</pre>
 
-<h2 id="Notes" name="Notes">Заметки</h2>
+<h2 id="Notes" name="Notes">Примечания</h2>
 
 <p>Свойство <code>pageXOffset</code> - другое название свойства <code>scrollX</code><span style="line-height: 1.572;">:</span></p>
 
@@ -70,86 +70,9 @@ var y = (window.pageYOffset !== undefined)
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
 
-<p>{{CompatibilityTable}}</p>
+<p>{{Compat("api.Window.scrollX")}}</p>
 
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Базовая поддержка</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>Точность субпикселей</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop(55)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile" style="line-height: 19.0909080505371px;">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Базовая поддержка</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>Точность субпикселей</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile(55)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h2 id="See_also" name="See_also">См. также</h2>
+<h2 id="See_also" name="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{domxref("Window.scrollY")}}</li>

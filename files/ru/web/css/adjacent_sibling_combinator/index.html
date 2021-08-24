@@ -5,9 +5,9 @@ translation_of: Web/CSS/Adjacent_sibling_combinator
 ---
 <p>{{CSSRef("Selectors")}}</p>
 
-<p>Указывает на смежный или следующий селектор. Обеспечивает выбор только элемента расположенного непосредственно за определенным в первой части элементом.</p>
+<p>Указывает на смежный или следующий селектор. Обеспечивает выбор только элемента расположенного непосредственно за определённым в первой части элементом.</p>
 
-<h2 id="Синтакс">Синтакс</h2>
+<h2 id="Синтаксис">Синтаксис</h2>
 
 <pre class="syntaxbox">former_element + target_element { <em>style properties</em> }
 </pre>
@@ -29,7 +29,7 @@ translation_of: Web/CSS/Adjacent_sibling_combinator
 
 <p>{{EmbedLiveSample('Example_1', 200, 100)}}</p>
 
-<p>Так же может использоваться для задания стиля определенного класса "caption span" следующих {{HTMLElement("img")}} вложенных элементов:</p>
+<p>Так же может использоваться для задания стиля определённого класса "caption span" следующих {{HTMLElement("img")}} вложенных элементов:</p>
 
 <pre class="brush: css">img + span.caption {
   font-style: italic;
@@ -73,55 +73,7 @@ translation_of: Web/CSS/Adjacent_sibling_combinator
 
 <h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Возможность</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Базовая поддержка</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>7.0<sup>[1]</sup></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Возможность</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Базовая поддержка</td>
-   <td>2.1</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] <span class="short_text" id="result_box" lang="ru"><span class="hps">Интернет эксплорер</span></span> 7 не обновляет стили корректно, когда элемент динамически размещается до элемента, отобранном селектором. А в <span class="short_text" id="result_box" lang="ru"><span class="hps">Интернет эксплорер</span></span> 8, если вставлен динамически кликом на ссылку, стиль превдокласса first-child не применяется до того, как ссылка потеряет фокус.</p>
+<p>{{Compat("css.selectors.adjacent_sibling")}}</p>
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 

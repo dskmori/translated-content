@@ -8,7 +8,7 @@ translation_of: Web/API/AudioBuffer
 <div>
 <h2 id="Сводка">Сводка</h2>
 
-<p><code>AudioBuffer</code> - это интерфейс короткого звукового ресурса (audio asset), находящегося в памяти и созданного из аудиофайла методом {{ domxref("AudioContext.decodeAudioData()") }}, или из исходных данных с помощью метода {{ domxref("AudioContext.createBuffer()") }}. Помещенные в AudioBuffer звуковые данные могут быть воспроизведены в  {{ domxref("AudioBufferSourceNode") }}.</p>
+<p><code>AudioBuffer</code> - это интерфейс короткого звукового ресурса (audio asset), находящегося в памяти и созданного из аудиофайла методом {{ domxref("AudioContext.decodeAudioData()") }}, или из исходных данных с помощью метода {{ domxref("AudioContext.createBuffer()") }}. Помещённые в AudioBuffer звуковые данные могут быть воспроизведены в  {{ domxref("AudioBufferSourceNode") }}.</p>
 </div>
 
 <p>Объекты этого типа предназначены для хранения небольших звуковых фрагментов, обычно менее 45 секунд. Для более длинных звуков, объекты реализующие {{domxref("MediaElementAudioSourceNode")}} являются более подходящими. Этот буфер содержит данные в формате неперемещаемого IEE754 32-битного линейного ИКМ с номинальным диапазоном от -1 до +1, то есть 32-битный буфер с плавающей точкой каждого звукового фрагмента (samples) от -1.0 до 1.0. Если {{domxref("AudioBuffer")}} имеет несколько каналов, то они хранятся в отдельном буфере.</p>
@@ -17,7 +17,7 @@ translation_of: Web/API/AudioBuffer
 
 <dl>
  <dt>{{domxref("AudioBuffer.AudioBuffer", "AudioBuffer()")}}</dt>
- <dd><span class="hidden"> </span>Создает и возвращает новый объект <code>AudioBuffer</code>.</dd>
+ <dd><span class="hidden"> </span>Создаёт и возвращает новый объект <code>AudioBuffer</code>.</dd>
  <dt>
  <h2 id="Свойства"><span class="hidden"> </span>Свойства</h2>
  </dt>
@@ -49,7 +49,7 @@ translation_of: Web/API/AudioBuffer
 <pre class="brush: js;highlight:[7,14,27]">// Стерео
 var channels = 2;
 
-// Создает пустой двухсекундный стерео-буфер
+// Создаёт пустой двухсекундный стерео-буфер
 // с частотой звука AudioContext (sample rate)
 var frameCount = audioCtx.sampleRate * 2.0;
 var myArrayBuffer = audioCtx.createBuffer(channels, frameCount, audioCtx.sampleRate);
@@ -103,112 +103,11 @@ button.onclick = function() {
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Возможность</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Базовая поддержка</td>
-   <td>{{CompatChrome(14.0)}} {{property_prefix("webkit")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop(25)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatOpera(15)}} {{property_prefix("webkit")}}<br>
-    {{CompatOpera(22)}}</td>
-   <td>6 {{property_prefix("webkit")}}</td>
-  </tr>
-  <tr>
-   <td>
-    <p><code>copyFromChannel()</code> и <code>copyToChannel()</code></p>
-   </td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop(27)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td>constructor</td>
-   <td>{{CompatChrome(55.0)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatOpera(42)}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Возможность</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome для Android</th>
-  </tr>
-  <tr>
-   <td>Базовая поддержка</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile(25)}}</td>
-   <td>1.2</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>6 {{property_prefix("webkit")}}</td>
-   <td>{{CompatChrome(28.0)}} {{property_prefix("webkit")}}</td>
-  </tr>
-  <tr>
-   <td><code>copyFromChannel() </code>и <code>copyToChannel()</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile(27)}}</td>
-   <td> </td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>constructor</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(55.0)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatOperaMobile(42)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatChrome(55.0)}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+<p>{{Compat("api.AudioBuffer")}}</p>
 
 <h2 id="sect1"> </h2>
 
-<h2 id="См._также">См. также</h2>
+<h2 id="Смотрите_также">Смотрите также</h2>
 
 <ul>
  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Использование Web Audio API</a></li>

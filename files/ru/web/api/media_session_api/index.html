@@ -48,7 +48,7 @@ translation_of: Web/API/Media_Session_API
 
 <h2 id="Примеры">Примеры</h2>
 
-<p>Данный пример демонстрирует работу и определение доступности Media Session API. Также, он передает метаданные и определяет собственные обработчики событий:</p>
+<p>Данный пример демонстрирует работу и определение доступности Media Session API. Также, он передаёт метаданные и определяет собственные обработчики событий:</p>
 
 <pre class="brush: js notranslate">if ('mediaSession' in navigator) {
   navigator.mediaSession.metadata = new MediaMetadata({
@@ -73,7 +73,7 @@ translation_of: Web/API/Media_Session_API
   navigator.mediaSession.setActionHandler('nexttrack', function() { /* Code excerpted. */ });
 }</pre>
 
-<p>Некоторые браузеры отключают автовоспроизведение медиаэлементов на мобильных устройствах и требуют действий пользователя для начала воспроизведения. Этот пример добавит обработчик события <code>pointerup</code> для кнопки воспроизведения на странице, который начнет работу с медиасессией:</p>
+<p>Некоторые браузеры отключают автовоспроизведение медиаэлементов на мобильных устройствах и требуют действий пользователя для начала воспроизведения. Этот пример добавит обработчик события <code>pointerup</code> для кнопки воспроизведения на странице, который начнёт работу с медиасессией:</p>
 
 <pre class="brush: js notranslate">playButton.addEventListener('pointerup', function(event) {
   var audio = document.querySelector('audio');
@@ -102,9 +102,5 @@ translation_of: Web/API/Media_Session_API
 </table>
 
 <h2 id="Совместимость">Совместимость</h2>
-
-<div class="hidden">
-<p>The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-</div>
 
 <p>{{Compat("api.MediaSession")}}</p>

@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray
 ---
 <div>{{JSRef}}</div>
 
-<p>Типизированный массив<strong><code> Uint8ClampedArray </code></strong>—  это массив,  служащий для хранения 8-битных безнаковых чисел, обрезаемых до диапазона от 0 до 255. Если значение меньше 0, то оно будет приведено к 0 , и к 255, если оно больше 255. Числа с плавающей точкой округляются с помощью математического округления. Массив инициализуруется нулями. После того как значение установлено, Вы можете ссылаться на него с помощью методов объекта или через стандартный синтаксис массивов (то есть, брать значения с помощью квадратных скобок). </p>
+<p>Типизированный массив<strong><code> Uint8ClampedArray </code></strong>—  это массив,  служащий для хранения 8-битных беззнаковых чисел, обрезаемых до диапазона от 0 до 255. Если значение меньше 0, то оно будет приведено к 0 , и к 255, если оно больше 255. Числа с плавающей точкой округляются с помощью математического округления. Массив инициализируется нулями. После того как значение установлено, вы можете ссылаться на него с помощью методов объекта или через стандартный синтаксис массивов (то есть, брать значения с помощью квадратных скобок). </p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -170,72 +170,7 @@ var z = new Uint8ClampedArray(buffer, 1, 4);
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>7.0</td>
-   <td>{{ CompatGeckoDesktop(2) }}</td>
-   <td>11 (as of <a href="https://support.microsoft.com/en-us/kb/2929437">KB2929437</a>)</td>
-   <td>11.6</td>
-   <td>5.1</td>
-  </tr>
-  <tr>
-   <td><code>new</code> is required</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{ CompatGeckoDesktop(44) }}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>4.0</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{ CompatGeckoMobile(2) }}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>11.6</td>
-   <td>4.2</td>
-  </tr>
-  <tr>
-   <td><code>new</code> is required</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{ CompatGeckoMobile(44) }}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+<p>{{Compat}}</p>
 
 <h2 id="Compatibility_notes">Compatibility notes</h2>
 

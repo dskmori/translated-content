@@ -82,7 +82,7 @@ console.log(encodeURIComponent('\uD800'));
 // один низкий суррогат бросит "URIError: malformed URI sequence"
 console.log(encodeURIComponent('\uDFFF'));</code></pre>
 
-<p>Также заметим, что следуя наиболее свежей <a href="http://tools.ietf.org/html/rfc3986">RFC3986</a> для URL, которая делает квадратные скобки защищенными (для IPv6) и таким образом не кодирует, когда формирование чего-либо, не являющегося частью URL (такое как домен), следующий сниппет поможет:</p>
+<p>Также заметим, что следуя наиболее свежей <a href="http://tools.ietf.org/html/rfc3986">RFC3986</a> для URL, которая делает квадратные скобки защищёнными (для IPv6) и таким образом не кодирует, когда формирование чего-либо, не являющегося частью URL (такое как домен), следующий сниппет поможет:</p>
 
 <pre class="brush: js">function fixedEncodeURI (str) {
     return encodeURI(str).replace(/%5B/g, '[').replace(/%5D/g, ']');
@@ -116,12 +116,6 @@ console.log(encodeURIComponent('\uDFFF'));</code></pre>
 </table>
 
 <h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
-
-
-
-<div class="hidden">
-<p>The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-</div>
 
 <p>{{Compat("javascript.builtins.encodeURI")}}</p>
 

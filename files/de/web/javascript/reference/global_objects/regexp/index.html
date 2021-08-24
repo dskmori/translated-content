@@ -38,7 +38,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/RegExp
   <dd>Groß-/Kleinschreibung ignorieren</dd>
   <dt><code>m</code></dt>
   <dd>multiline; behandelt den Suchkontext als Mehrfachzeilen, d.h. Anfang- und Endeanker (^ und $) entsprechen dem Anfang bzw. Ende <em>jeder einzelnen</em> Zeile (begrenzt durch \n oder \r), nicht nur dem Anfang und Ende der gesamten zu durchsuchenden Zeichenkette.</dd>
-  <dt><code>y</code> {{Fx_minversion_inline(3)}} {{non-standard_inline}}</dt>
+  <dt><code>y</code> {{non-standard_inline}}</dt>
   <dd>sticky; matches only from the index indicated by the <code>lastIndex</code> property of this regular expression in the target string (and does not attempt to match from any later indexes). This allows the match-only-at-start capabilities of the character "^" to effectively be used at any location in a string by changing the value of the <code>lastIndex</code> property.</dd>
  </dl>
  </dd>
@@ -399,10 +399,10 @@ var re = new RegExp("\\w+");
 <h3 id="Fußnoten">Fußnoten</h3>
 
 <ol>
- <li>{{endnote("equivalent_s")}}Equivalent to:
+ <li>Equivalent to:
   <p><code>[\t\n\v\f\r \u00a0\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200a\u200b\u2028\u2029\u3000]</code></p>
  </li>
- <li>{{endnote("equivalent_S")}}Equivalent to:
+ <li>Equivalent to:
   <p><code>[^\t\n\v\f\r \u00a0\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200a\u200b\u2028\u2029\u3000]</code></p>
  </li>
 </ol>
@@ -494,7 +494,7 @@ print(regex.lastIndex);  // prints "15"
 
 // and so on</pre>
 
-<p>Hier ist eine externe Quelle um alle Unicode Blöcke für verschiedene Scripte zu erhalten: <a href="http://kourge.net/projects/regexp-unicode-block" title="http://kourge.net/projects/regexp-unicode-block">Regexp-unicode-block</a></p>
+<p>Hier ist eine externe Quelle um alle Unicode Blöcke für verschiedene Scripte zu erhalten: <a href="http://kourge.net/projects/regexp-unicode-block">Regexp-unicode-block</a></p>
 
 <h3 id="Weitere_nennenswerte_Beispiele">Weitere nennenswerte Beispiele</h3>
 

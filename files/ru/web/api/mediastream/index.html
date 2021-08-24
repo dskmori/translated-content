@@ -15,7 +15,7 @@ translation_of: Web/API/MediaStream
 
 <p><span class="seoSummary">Интерфейс <strong><code>MediaStream</code></strong> представляет поток медиа данных. Поток состоит из нескольких <strong>треков</strong>, таких как видео и аудио треки. Каждый трек является экземпляром {{domxref("MediaStreamTrack")}}. MediaStream можно получить либо с помощью конструктора, либо вызовом {{domxref("MediaDevices.getUserMedia()")}}.</span></p>
 
-<p>Некоторые агенты предоставляют подклассы, чтобы привести более точную информацию или расширить функционал, например {{domxref("CanvasCaptureMediaStream")}}.</p>
+<p>Некоторые агенты предоставляют подклассы, чтобы привести более точную информацию или расширить функциональность, например {{domxref("CanvasCaptureMediaStream")}}.</p>
 
 <h2 id="Конструктор">Конструктор</h2>
 
@@ -47,9 +47,9 @@ translation_of: Web/API/MediaStream
 
 <dl>
  <dt>{{domxref("MediaStream.onaddtrack")}}</dt>
- <dd>Объект {{domxref("EventHandler")}}, содержащий действие, которое должно выполняться, когда случается событие {{event("addtrack")}} при добавлении нового объекта {{domxref("MediaStreamTrack")}}.</dd>
+ <dd>Объект {{event("Event_handlers", "event handler")}}, содержащий действие, которое должно выполняться, когда случается событие {{event("addtrack")}} при добавлении нового объекта {{domxref("MediaStreamTrack")}}.</dd>
  <dt>{{domxref("MediaStream.onremovetrack")}}</dt>
- <dd>Объект {{domxref("EventHandler")}}, содержащий действие, которое должно выполняться, когда случается событие {{event("removetrack")}} при удалении объекта  {{domxref("MediaStreamTrack")}}.</dd>
+ <dd>Объект {{event("Event_handlers", "event handler")}}, содержащий действие, которое должно выполняться, когда случается событие {{event("removetrack")}} при удалении объекта  {{domxref("MediaStreamTrack")}}.</dd>
 </dl>
 
 <h2 id="Методы">Методы</h2>
@@ -75,7 +75,7 @@ translation_of: Web/API/MediaStream
  <dt>{{domxref("MediaStream.getTrackById()")}}</dt>
  <dd>Возвращает трек с <code style="font-size: 14px;">trackid</code> соответствующем данному. Если в метод не передано аргументов или трека с данным ID нет, возвращает <code>null</code>. Если несколько треков имеют одинаковый ID, возвращает первый из них.</dd>
  <dt>{{domxref("MediaStream.getTracks()")}}</dt>
- <dd>Возвращает список всех объектов {{domxref("MediaStreamTrack")}}, сохранённых в объекте <code>MediaStream</code>, вне зависимости от значения их свойства <code>kind</code>. Порядок не определён и может меняться между брауерами, а также между вызовами.</dd>
+ <dd>Возвращает список всех объектов {{domxref("MediaStreamTrack")}}, сохранённых в объекте <code>MediaStream</code>, вне зависимости от значения их свойства <code>kind</code>. Порядок не определён и может меняться между браузерами, а также между вызовами.</dd>
 </dl>
 
 <dl>
@@ -117,10 +117,6 @@ translation_of: Web/API/MediaStream
 </table>
 
 <h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
-
-<div class="hidden">
-<p>The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-</div>
 
 <p>{{Compat("api.MediaStream")}}</p>
 

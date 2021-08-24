@@ -15,7 +15,7 @@ translation_of: Web/API/Notification
 
 <dl>
  <dt>{{domxref("Notification.Notification", "Notification()")}}</dt>
- <dd>Создает новый экземпляр объекта <code>Notification</code>.</dd>
+ <dd>Создаёт новый экземпляр объекта <code>Notification</code>.</dd>
 </dl>
 
 <h2 id="Свойства">Свойства</h2>
@@ -53,7 +53,7 @@ translation_of: Web/API/Notification
  <dt>{{domxref("Notification.lang")}} {{readonlyinline}}</dt>
  <dd>Код языка уведомления, указывается в опциях как параметр конструктора.</dd>
  <dt>{{domxref("Notification.tag")}} {{readonlyinline}}</dt>
- <dd>Инденцификатор (ID) уведомления, если есть, указывается в опциях как параметр конструктора.</dd>
+ <dd>Идентификатор (ID) уведомления, если есть, указывается в опциях как параметр конструктора.</dd>
  <dt>{{domxref("Notification.icon")}} {{readonlyinline}}</dt>
  <dd>URL изображения, используемого в качестве иконки уведомления, указывается в опциях как параметр конструктора.</dd>
  <dt>{{domxref("Notification.image")}} {{readonlyinline}}</dt>
@@ -79,7 +79,7 @@ translation_of: Web/API/Notification
  <dt>{{domxref("Notification.title")}} {{readonlyinline}}</dt>
  <dd>Заголовок уведомления, указывается в опциях как параметр конструктора.</dd>
  <dt>{{domxref("Notification.vibrate")}} {{readonlyinline}}</dt>
- <dd>Задает шаблон вибрации для устройств с вибро.</dd>
+ <dd>Задаёт шаблон вибрации для устройств с вибро.</dd>
 </dl>
 
 <h4 id="Не_поддерживаемые_свойства">Не поддерживаемые свойства</h4>
@@ -106,7 +106,7 @@ translation_of: Web/API/Notification
 
 <h4 id="Устаревшие_обработчики_событий">Устаревшие обработчики событий</h4>
 
-<p>Следующие обработчики событий все еще поддерживаются, как указано в разделе {{anch("browser compatibility")}} ниже, но более не входят в актуальную спецификацию. Небезосновательно можно предположить, что они устарели и могут перестать работать в будущих версиях браузеров.</p>
+<p>Следующие обработчики событий все ещё поддерживаются, как указано в разделе {{anch("browser compatibility")}} ниже, но более не входят в актуальную спецификацию. Небезосновательно можно предположить, что они устарели и могут перестать работать в будущих версиях браузеров.</p>
 
 <dl>
  <dt>{{domxref("Notification.onclose")}}</dt>
@@ -153,21 +153,21 @@ translation_of: Web/API/Notification
 
   // Проверка разрешения на отправку уведомлений
   else if (Notification.permission === "granted") {
-    // Если разрешено, то создаем уведомление
+    // Если разрешено, то создаём уведомление
     var notification = new Notification("Hi there!");
   }
 
   // В противном случае, запрашиваем разрешение
   else if (Notification.permission !== 'denied') {
     Notification.requestPermission(function (permission) {
-      // Если пользователь разрешил, то создаем уведомление
+      // Если пользователь разрешил, то создаём уведомление
       if (permission === "granted") {
         var notification = new Notification("Hi there!");
       }
     });
   }
 
-  // В конечном счете, если пользователь отказался от получения
+  // В конечном счёте, если пользователь отказался от получения
   // уведомлений, то стоит уважать его выбор и не беспокоить его
   // по этому поводу.
 }</pre>
@@ -180,7 +180,7 @@ translation_of: Web/API/Notification
   console.log(result);
 });</code></pre>
 
-<p>Затем мы запускаем простую функцию <code>spawnNotification()</code>, когда мы хотим вывести уведомление, передающую аргументы для указания тела, иконки и заголовка, которые нам нужны, а затем она создает необходимый объект параметров <code>options</code> и запускает уведомление с помощью конструктора  {{domxref("Notification.Notification","Notification()")}}.</p>
+<p>Затем мы запускаем простую функцию <code>spawnNotification()</code>, когда мы хотим вывести уведомление, передающую аргументы для указания тела, иконки и заголовка, которые нам нужны, а затем она создаёт необходимый объект параметров <code>options</code> и запускает уведомление с помощью конструктора  {{domxref("Notification.Notification","Notification()")}}.</p>
 
 <pre class="brush: js"><code>function spawnNotification(body, icon, title) {
   var options = {
@@ -209,161 +209,7 @@ translation_of: Web/API/Notification
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<table>
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Базовая поддержка</td>
-   <td>5{{property_prefix("webkit")}}<sup>[1]</sup><br>
-    22</td>
-   <td>4.0 {{property_prefix("moz")}}<sup>[2]</sup><br>
-    22</td>
-   <td>{{CompatNo}}</td>
-   <td>25</td>
-   <td>6<sup>[3]</sup></td>
-  </tr>
-  <tr>
-   <td><code>icon</code></td>
-   <td>5{{property_prefix("webkit")}}<sup>[1]</sup><br>
-    22</td>
-   <td>4.0 {{property_prefix("moz")}}<sup>[2]</sup><br>
-    22</td>
-   <td>{{CompatNo}}</td>
-   <td>25</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td>Available in workers</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop("41.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>silent</code></td>
-   <td>{{CompatChrome(43.0)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>noscreen</code>, <code>renotify</code>, <code>sound</code>, <code>sticky</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-
-<table>
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Базовая поддержка</td>
-   <td>{{CompatUnknown}}</td>
-   <td>
-    <p>{{CompatVersionUnknown}}</p>
-   </td>
-   <td>4.0{{property_prefix("moz")}}<sup>[2]</sup><br>
-    22</td>
-   <td>1.0.1{{property_prefix("moz")}}<sup>[2]</sup><br>
-    1.2</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>
-    <p>{{CompatVersionUnknown}}</p>
-   </td>
-  </tr>
-  <tr>
-   <td><code>icon</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>4.0{{property_prefix("moz")}}<sup>[2]</sup><br>
-    22</td>
-   <td>1.0.1{{property_prefix("moz")}}<sup>[2]</sup><br>
-    1.2</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>Available in workers</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("41.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>silent</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(43.0)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(43.0)}}</td>
-  </tr>
-  <tr>
-   <td><code>noscreen</code>, <code>renotify</code>, <code>sound</code>, <code>sticky</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-
-<p>[1] Before Chrome 22, the support for notification followed an <a href="http://www.chromium.org/developers/design-documents/desktop-notifications/api-specification">old prefixed version of the specification</a> and used the {{domxref("window.navigator.webkitNotifications","navigator.webkitNotifications")}} object to instantiate a new notification.</p>
-
-<p>До Chrome 32, {{domxref("Notification.permission")}} не поддерживается.</p>
-
-<p>До Chrome 42, дополнения service worker не поддерживаются.</p>
-
-<p>[2] Prior to Firefox 22 (Firefox OS &lt;1.2), the instantiation of a new notification must be done with the {{domxref("window.navigator.mozNotification", "navigator.mozNotification")}} object through its <code>createNotification</code> method.</p>
-
-<p>Prior to Firefox 22 (Firefox OS &lt;1.2), the Notification was displayed when calling the <code>show</code> method and supported only the <code>click</code> and <code>close</code> events.</p>
-
-<p>Nick Desaulniers написал <a href="https://github.com/nickdesaulniers/fxos-irc/blob/master/js/notification.js">Notification shim</a>, чтобы покрыть как новые так и старые реализации.</p>
-
-<p>One particular Firefox OS issue is that you can <a href="https://github.com/nickdesaulniers/fxos-irc/blob/0160cf6c3a2b5c9fe33822aaf6bcba3b7e846da9/my.js#L171">pass a path to an icon</a> to use in the notification, but if the app is packaged you cannot use a relative path like <code>/my_icon.png</code>. You also can't use <code>window.location.origin + "/my_icon.png"</code> because <code>window.location.origin</code> is null in packaged apps. The <a href="https://developer.mozilla.org/en-US/Apps/Developing/Manifest#origin">manifest origin field</a> fixes this, but it is only available in Firefox OS 1.1+. A potential solution for supporting Firefox OS &lt;1.1 is to <a href="https://github.com/nickdesaulniers/fxos-irc/blob/0160cf6c3a2b5c9fe33822aaf6bcba3b7e846da9/my.js#L168">pass an absolute URL to an externally hosted version of the icon</a>. This is less than ideal as the notification is displayed immediately without the icon, then the icon is fetched, but it works on all versions of Firefox OS.</p>
-
-<p>When using notifications  in a Firefox OS app, be sure to add the <code>desktop-notification</code> permission in your manifest file. Notifications can be used at any permission level, hosted or above: <code>"permissions": { "desktop-notification": {} }</code></p>
-
-<p>[3] Safari начали поддержку уведомлений с Safari 6, но только на Mac OSX 10.8+ (Mountain Lion).</p>
+<p>{{Compat("api.Notification")}}</p>
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 
