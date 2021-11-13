@@ -21470,12 +21470,6 @@
       "Wind1808"
     ]
   },
-  "Web/API/ServiceWorkerGlobalScope/caches": {
-    "modified": "2020-10-15T22:29:46.631Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
   "Web/API/ServiceWorkerGlobalScope/clients": {
     "modified": "2019-03-23T22:21:03.744Z",
     "contributors": [
@@ -48552,6 +48546,12 @@
     "modified": "2020-10-15T22:32:16.096Z",
     "contributors": [
       "mfuji09"
+    ]
+  },
+  "conflicting/Web/API/caches": {
+    "modified": "2020-10-15T22:29:46.631Z",
+    "contributors": [
+      "Wind1808"
     ]
   },
   "conflicting/Web/API_dd04ca1265cb79b990b8120e5f5070d3": {
