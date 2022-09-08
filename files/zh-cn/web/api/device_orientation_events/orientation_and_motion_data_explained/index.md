@@ -1,6 +1,6 @@
 ---
 title: Orientation 和 motion 数据解释
-slug: Web/Events/Orientation_and_motion_data_explained
+slug: Web/API/Device_orientation_events/Orientation_and_motion_data_explained
 tags:
   - Intermediate
   - Mobile
@@ -10,6 +10,7 @@ tags:
   - páginas_a_traducir
   - rotation
 translation_of: Web/Events/Orientation_and_motion_data_explained
+original_slug: Web/Events/Orientation_and_motion_data_explained
 ---
 ## 总言
 
